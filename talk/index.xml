@@ -2,64 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recent &amp; Upcoming Talks on Alex Melemenidis&#39;s homepage</title>
-    <link>/talk/</link>
+    <link>https://alex-m-ffm.github.io/talk/</link>
     <description>Recent content in Recent &amp; Upcoming Talks on Alex Melemenidis&#39;s homepage</description>
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
-    <lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2020 13:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://alex-m-ffm.github.io/talk/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Coding and Analyzing Qualitative Data</title>
-      <link>/talk/coding/</link>
-      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
-      
-      <guid>/talk/coding/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using academia&amp;rsquo;s &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Further talk details can easily be added to this page using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
-      <title>Qualitative Research Summer Intensive</title>
-      <link>/talk/qualitative/</link>
-      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
+      <title>Talking about bees to data scientists</title>
+      <link>https://alex-m-ffm.github.io/talk/bob-correlcon/</link>
+      <pubDate>Sat, 07 Nov 2020 13:00:00 +0000</pubDate>
       
-      <guid>/talk/qualitative/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using academia&amp;rsquo;s &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Further talk details can easily be added to this page using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Synthesizing Qualitative Data</title>
-      <link>/talk/synthesizing/</link>
-      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
-      
-      <guid>/talk/synthesizing/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using academia&amp;rsquo;s &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Further talk details can easily be added to this page using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+      <guid>https://alex-m-ffm.github.io/talk/bob-correlcon/</guid>
+      <description>&lt;p&gt;During our first talk on CorrelCon 2020, my project teammates Diren Senger (University of Bremen), Alexander Goncharskiy and I (both Correlaid x Rhein-Main) presented our work in the Bee  Observer project, along with the general topic of bees and what Citizen Science means.
+Watch the recording of the talk to get a flavour.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/POqqK7Qj4cU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 </description>
     </item>
     

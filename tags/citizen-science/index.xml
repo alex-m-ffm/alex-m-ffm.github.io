@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Citizen Science on Alex Melemenidis&#39;s homepage</title>
+    <link>https://alex-m-ffm.github.io/tags/citizen-science/</link>
+    <description>Recent content in Citizen Science on Alex Melemenidis&#39;s homepage</description>
+    <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; {year}</copyright>
+    <lastBuildDate>Thu, 24 Dec 2020 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://alex-m-ffm.github.io/tags/citizen-science/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bee Observer</title>
+      <link>https://alex-m-ffm.github.io/project/bee-observer/</link>
+      <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://alex-m-ffm.github.io/project/bee-observer/</guid>
+      <description>&lt;p&gt;Through my MeetUp newsletter I randomly stumbled upon the Rhein-Main local chapter of &lt;a href=&#34;https://correlaid.org/&#34;&gt;Correlaid&lt;/a&gt;, a non-profit organisation that is supporting other NPOs in data science and digital projects.
+For my thesis project I joined the on-going collaboration with the University of Bremen on the project &lt;a href=&#34;http://www.cognitive-neuroinformatics.com/de/forschung/projekte/sensorbeuten&#34;&gt;Bee Observer (BOB)&lt;/a&gt;. Through sensors in beehives this project aims at helping beekeepers in their regular activities and create a large dataset for bee research.&lt;/p&gt;
+&lt;p&gt;Read the thesis &lt;a href=&#34;https://alex-m-ffm.github.io/bob-thesis/&#34;&gt;HERE&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Talking about bees to data scientists</title>
+      <link>https://alex-m-ffm.github.io/talk/bob-correlcon/</link>
+      <pubDate>Sat, 07 Nov 2020 13:00:00 +0000</pubDate>
+      
+      <guid>https://alex-m-ffm.github.io/talk/bob-correlcon/</guid>
+      <description>&lt;p&gt;During our first talk on CorrelCon 2020, my project teammates Diren Senger (University of Bremen), Alexander Goncharskiy and I (both Correlaid x Rhein-Main) presented our work in the Bee  Observer project, along with the general topic of bees and what Citizen Science means.
+Watch the recording of the talk to get a flavour.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/POqqK7Qj4cU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+  </channel>
+</rss>

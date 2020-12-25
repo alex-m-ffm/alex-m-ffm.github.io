@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bees on Alex Melemenidis&#39;s homepage</title>
+    <link>https://alex-m-ffm.github.io/tags/bees/</link>
+    <description>Recent content in bees on Alex Melemenidis&#39;s homepage</description>
+    <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; {year}</copyright>
+    <lastBuildDate>Sat, 07 Nov 2020 13:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://alex-m-ffm.github.io/tags/bees/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Talking about bees to data scientists</title>
+      <link>https://alex-m-ffm.github.io/talk/bob-correlcon/</link>
+      <pubDate>Sat, 07 Nov 2020 13:00:00 +0000</pubDate>
+      
+      <guid>https://alex-m-ffm.github.io/talk/bob-correlcon/</guid>
+      <description>&lt;p&gt;During our first talk on CorrelCon 2020, my project teammates Diren Senger (University of Bremen), Alexander Goncharskiy and I (both Correlaid x Rhein-Main) presented our work in the Bee  Observer project, along with the general topic of bees and what Citizen Science means.
+Watch the recording of the talk to get a flavour.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/POqqK7Qj4cU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+  </channel>
+</rss>

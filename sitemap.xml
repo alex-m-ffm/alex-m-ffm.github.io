@@ -3,242 +3,208 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/courses/example/example1/</loc>
+    <loc>https://alex-m-ffm.github.io/courses/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/example.1/example3/</loc>
+    <loc>https://alex-m-ffm.github.io/courses/example.1/example3/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/example.2/example3/</loc>
+    <loc>https://alex-m-ffm.github.io/courses/example.2/example3/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/example.1/</loc>
+    <loc>https://alex-m-ffm.github.io/courses/example.1/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/example.2/</loc>
+    <loc>https://alex-m-ffm.github.io/courses/example.2/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/example/</loc>
+    <loc>https://alex-m-ffm.github.io/courses/example/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/example.2/example4/</loc>
+    <loc>https://alex-m-ffm.github.io/courses/example.2/example4/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/example/example2/</loc>
+    <loc>https://alex-m-ffm.github.io/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/example.1/example4/</loc>
+    <loc>https://alex-m-ffm.github.io/courses/example.1/example4/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <loc>https://alex-m-ffm.github.io/</loc>
+    <lastmod>2020-12-25T15:10:59+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/talk/coding/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <loc>https://alex-m-ffm.github.io/categories/</loc>
+    <lastmod>2020-12-25T15:10:59+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/talk/qualitative/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <loc>https://alex-m-ffm.github.io/post/2020-12-25-hello-world/</loc>
+    <lastmod>2020-12-25T15:10:59+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/talk/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <loc>https://alex-m-ffm.github.io/post/</loc>
+    <lastmod>2020-12-25T15:10:59+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/talk/synthesizing/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <loc>https://alex-m-ffm.github.io/categories/r/</loc>
+    <lastmod>2020-12-25T15:10:59+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/</loc>
+    <loc>https://alex-m-ffm.github.io/tags/anomaly-detection/</loc>
+    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex-m-ffm.github.io/project/bee-observer/</loc>
+    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex-m-ffm.github.io/tags/citizen-science/</loc>
+    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex-m-ffm.github.io/tags/classification/</loc>
+    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex-m-ffm.github.io/tags/data-science/</loc>
+    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex-m-ffm.github.io/tags/iot/</loc>
+    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex-m-ffm.github.io/project/</loc>
+    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex-m-ffm.github.io/tags/sensors/</loc>
+    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex-m-ffm.github.io/tags/</loc>
+    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex-m-ffm.github.io/tags/bees/</loc>
+    <lastmod>2020-11-07T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex-m-ffm.github.io/talk/</loc>
+    <lastmod>2020-11-07T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex-m-ffm.github.io/talk/bob-correlcon/</loc>
+    <lastmod>2020-11-07T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex-m-ffm.github.io/courses/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/admin/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/3/</loc>
+    <loc>https://alex-m-ffm.github.io/authors/admin/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/preprint/</loc>
+    <loc>https://alex-m-ffm.github.io/publication_types/3/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/</loc>
+    <loc>https://alex-m-ffm.github.io/publication/preprint/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/</loc>
+    <loc>https://alex-m-ffm.github.io/authors/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/source-themes/</loc>
+    <loc>https://alex-m-ffm.github.io/publication_types/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+    <loc>https://alex-m-ffm.github.io/publication/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/jupyter/</loc>
+    <loc>https://alex-m-ffm.github.io/tags/source-themes/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex-m-ffm.github.io/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/slides/</loc>
+    <loc>https://alex-m-ffm.github.io/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/slides/example/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/privacy/</loc>
-    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/artificial-intelligence/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/deep-learning/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/deep-learning/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/demo/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/external-project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/human/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/internal-project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/robotics/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/robotics/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/skin-cancer-ai/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/snail/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/academia/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/getting-started/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/2/</loc>
+    <loc>https://alex-m-ffm.github.io/publication_types/2/</loc>
     <lastmod>2015-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/journal-article/</loc>
+    <loc>https://alex-m-ffm.github.io/publication/journal-article/</loc>
     <lastmod>2015-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/robert-ford/</loc>
+    <loc>https://alex-m-ffm.github.io/authors/robert-ford/</loc>
     <lastmod>2015-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication_types/1/</loc>
+    <loc>https://alex-m-ffm.github.io/publication_types/1/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/conference-paper/</loc>
+    <loc>https://alex-m-ffm.github.io/publication/conference-paper/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
   </url>
   
 </urlset>
