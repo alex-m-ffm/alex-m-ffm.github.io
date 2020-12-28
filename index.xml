@@ -66,5 +66,44 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://alex-m-ffm.github.io/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      
+      <guid>https://alex-m-ffm.github.io/privacy/</guid>
+      <description>&lt;p&gt;All the following points should be read as “to the best of my knowledge”. I am not a website expert, so I can’t vouch for how this website is actually implemented. I can only tell you about my intentions.&lt;/p&gt;
+&lt;h2 id=&#34;what-personal-data-do-i-collect&#34;&gt;What personal data do I collect?&lt;/h2&gt;
+&lt;p&gt;I may collect the following personal information from you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;your name&lt;/li&gt;
+&lt;li&gt;your e-mail address&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how-do-i-collect-your-personal-data&#34;&gt;How do I collect your personal data?&lt;/h2&gt;
+&lt;p&gt;Your personal data is collected via &lt;a href=&#34;https://formspree.io/&#34;&gt;Formspree&lt;/a&gt; and its API. See their privacy policy &lt;a href=&#34;https://formspree.io/legal/privacy-policy&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Your data is collected when you send me a message via the &lt;strong&gt;contact form&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;how-will-i-use-your-data&#34;&gt;How will I use your data?&lt;/h2&gt;
+&lt;p&gt;I collect your data so that I can reply to your messages via the contact form.&lt;/p&gt;
+&lt;h2 id=&#34;how-is-your-data-stored&#34;&gt;How is your data stored?&lt;/h2&gt;
+&lt;p&gt;Personal data collected through the contact form is stored at &lt;a href=&#34;https://formspree.io/&#34;&gt;Formspree&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;what-are-your-data-protection-rights&#34;&gt;What are your data protection rights?&lt;/h2&gt;
+&lt;p&gt;I would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The right to access&lt;/strong&gt; – You have the right to request me for copies of your personal data.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The right to rectification&lt;/strong&gt; – You have the right to request that I correct any information you believe is inaccurate. You also have the right to request that I complete the information you believe is incomplete.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The right to erasure&lt;/strong&gt; – You have the right to request that I erase your personal data, under certain conditions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The right to restrict processing&lt;/strong&gt; – You have the right to request that I restrict the processing of your personal data, under certain conditions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The right to object to processing&lt;/strong&gt; – You have the right to object to my processing of your personal data, under certain conditions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The right to data portability&lt;/strong&gt; – You have the right to request that I transfer the data that I have collected to another organization, or directly to you, under certain conditions.&lt;/p&gt;
+&lt;p&gt;If you make a request, I have one month to respond to you. If you would like to exercise any of these rights, please contact my at my &lt;a href=&#34;mailto:alex.melemenidis@gmail.com&#34;&gt;email&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;privacy-policies-of-other-websites&#34;&gt;Privacy policies of other websites&lt;/h2&gt;
+&lt;p&gt;My personal website contains links to other websites. My privacy policy applies only to my website, so if you click on a link to another website, you should read their privacy policy.&lt;/p&gt;
+&lt;h2 id=&#34;changes-to-the-privacy-policy&#34;&gt;Changes to the privacy policy&lt;/h2&gt;
+&lt;p&gt;I keep my privacy policy under regular review and place any updates on this web page. This privacy policy was last updated on 28 December 2020.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-contact-me&#34;&gt;How to contact me&lt;/h2&gt;
+&lt;p&gt;If you have any questions about my privacy policy, the data I hold on you, or you would like to exercise one of your data protection rights, please do not hesitate to contact me.&lt;/p&gt;
+&lt;p&gt;Email me  at: &lt;a href=&#34;mailto:alex.melemenidis@gmail.com&#34;&gt;alex.melemenidis@gmail.com&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
