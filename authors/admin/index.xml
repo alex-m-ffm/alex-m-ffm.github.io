@@ -7,43 +7,37 @@
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
-    <lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://alex-m-ffm.github.io/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>An example preprint / working paper</title>
-      <link>https://alex-m-ffm.github.io/publication/preprint/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <title>Lockdown productivity</title>
+      <link>https://alex-m-ffm.github.io/post/2021-01-10-lockdown-productivity/</link>
+      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://alex-m-ffm.github.io/publication/preprint/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>An example journal article</title>
-      <link>https://alex-m-ffm.github.io/publication/journal-article/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://alex-m-ffm.github.io/publication/journal-article/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>An example conference paper</title>
-      <link>https://alex-m-ffm.github.io/publication/conference-paper/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://alex-m-ffm.github.io/publication/conference-paper/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+      <guid>https://alex-m-ffm.github.io/post/2021-01-10-lockdown-productivity/</guid>
+      <description>
+
+
+&lt;p&gt;Happy New Year everyone!&lt;/p&gt;
+&lt;p&gt;The last holiday period under Covid-19 restrictions was certainly different than in other, normal years. On the one hand I had more time available, as I consumed unused leave days before they would expire, but at the same time I could not meet my old hometown friends as often as I wanted or go to the fantastic christmas market of Braunschweig, which is normally a highlight of the holidays. So I restricted myself to one outside meetup with my friends for a walk in the park, otherwise played UNO or Yahtzee with my parents, my brother and his girlfriend and otherwise spent my time digitally to stay productive and creative.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;I learned to use &lt;code&gt;blogdown&lt;/code&gt; to build this very personal homepage from the awesome &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;book by Yihui Xie&lt;/a&gt;.&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;I freshened up my knowledge of &lt;code&gt;shiny&lt;/code&gt;, as this might come in handy at work soon. The book &lt;a href=&#34;https://mastering-shiny.org/index.html&#34;&gt;Mastering Shiny&lt;/a&gt; by Hadley Wickkham, while still in development, is now much more advanced than the first time I looked into it for a project during my MSc program in late 2019. With my new knowledge on Git I even made a &lt;a href=&#34;https://github.com/hadley/mastering-shiny/pull/350&#34;&gt;pull request&lt;/a&gt; to contribute to the book (albeit only a small fix)!&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;I finally managed to finish editing a video of a canoeing weekend in August (see below). The trip was a way for our dragonboat group to keep paddling on a weekend that would otherwise be spent on the river Main competing in the Frankfurt Museumsuferfest. Hopefully the vaccinations go ahead fast so that we can return to normality by end of August 2021!&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;With 2021 it seems we will have new legislation on drones, which may require getting a license. Since this is currently possible for free at the &lt;a href=&#34;https://lba-openuav.de/&#34;&gt;Luftfahrtbundesamt&lt;/a&gt;, I also did the online training for the A1/A3 open sub category. New travels and amazing travel videos to come soon!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Since Monday I am back in the (home) office, but the lockdown will continue until at least the end of the month. So more (forced) time for getting things done!&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/cguG88gxmrs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 </description>
     </item>
     
