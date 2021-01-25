@@ -7,10 +7,27 @@
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
-    <lastBuildDate>Sun, 24 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://alex-m-ffm.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Contributing to Open Source</title>
+      <link>https://alex-m-ffm.github.io/post/2021-01-25-contributing-to-open-source/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alex-m-ffm.github.io/post/2021-01-25-contributing-to-open-source/</guid>
+      <description>
+&lt;script src=&#34;https://alex-m-ffm.github.io/post/2021-01-25-contributing-to-open-source/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Last week I received the notification that an issue with the &lt;code&gt;dbplyr&lt;/code&gt; package in R, for which I had contributed to the &lt;a href=&#34;https://github.com/tidyverse/dbplyr/issues/534&#34;&gt;discussion&lt;/a&gt;, was closed and that the great Hadley Wickham had updated the code! 😎&lt;br /&gt;
+I was using the package at work for the preparation of a big data project and wanted to let the Hadoop system do the heavy lifting for the computation of some summary statistics and was going crazy over why my operations were not working. I was quite pleased to find out that this was a bug and that I could help describe it more precisely. I am not sure Hadley’s &lt;strong&gt;more&lt;/strong&gt; minimal reproducible example was meant as a criticism or not, but I will try to be more minimal in the future! 😄&lt;br /&gt;
+Can’t wait until the code change is also reflected on CRAN, as loading a package from GitHub at work is a bit more tricky…&lt;/p&gt;
+&lt;p&gt;This shall not be the last time! At work we still have an issue using the &lt;code&gt;gtrendsR&lt;/code&gt; package through the proxy due to some specific settings we have. Might be best if we just fork and do a pull request. And get mentioned as contributors… 😉&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>ECB Survey of Professional Forecasters - 2021 Q1</title>
