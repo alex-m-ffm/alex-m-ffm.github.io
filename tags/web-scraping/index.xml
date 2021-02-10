@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on Alex Melemenidis&#39;s homepage</title>
-    <link>https://alex-m-ffm.github.io/categories/r/</link>
-    <description>Recent content in R on Alex Melemenidis&#39;s homepage</description>
+    <title>web-scraping on Alex Melemenidis&#39;s homepage</title>
+    <link>https://alex-m-ffm.github.io/tags/web-scraping/</link>
+    <description>Recent content in web-scraping on Alex Melemenidis&#39;s homepage</description>
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
     <lastBuildDate>Wed, 10 Feb 2021 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://alex-m-ffm.github.io/categories/r/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://alex-m-ffm.github.io/tags/web-scraping/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -121,39 +121,6 @@ head(destatis_releases)&lt;/code&gt;&lt;/pre&gt;
 ## 5 &amp;quot;Insolvencies&amp;quot;                                   &amp;quot; November 2020&amp;quot;   2021-02-19
 ## 6 &amp;quot;Producer price index of industrial products&amp;quot;    &amp;quot; January 2021&amp;quot;    2021-02-19&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;I hope you found this tutorial useful!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Contributing to Open Source</title>
-      <link>https://alex-m-ffm.github.io/post/2021-01-25-contributing-to-open-source/</link>
-      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://alex-m-ffm.github.io/post/2021-01-25-contributing-to-open-source/</guid>
-      <description>
-&lt;script src=&#34;https://alex-m-ffm.github.io/post/2021-01-25-contributing-to-open-source/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;Last week I received the notification that an issue with the &lt;code&gt;dbplyr&lt;/code&gt; package in R, for which I had contributed to the &lt;a href=&#34;https://github.com/tidyverse/dbplyr/issues/534&#34;&gt;discussion&lt;/a&gt;, was closed and that the great Hadley Wickham had updated the code! 😎&lt;br /&gt;
-I was using the package at work for the preparation of a big data project and wanted to let the Hadoop system do the heavy lifting for the computation of some summary statistics and was going crazy over why my operations were not working. I was quite pleased to find out that this was a bug and that I could help describe it more precisely. I am not sure Hadley’s &lt;strong&gt;more&lt;/strong&gt; minimal reproducible example was meant as a criticism or not, but I will try to be more minimal in the future! 😄&lt;br /&gt;
-Can’t wait until the code change is also reflected on CRAN, as loading a package from GitHub at work is a bit more tricky…&lt;/p&gt;
-&lt;p&gt;This shall not be the last time! At work we still have an issue using the &lt;code&gt;gtrendsR&lt;/code&gt; package through the proxy due to some specific settings we have. Might be best if we just fork and do a pull request. And get mentioned as contributors… 😉&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>https://alex-m-ffm.github.io/post/2020-12-25-hello-world/</link>
-      <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://alex-m-ffm.github.io/post/2020-12-25-hello-world/</guid>
-      <description>
-
-
-&lt;p&gt;&lt;strong&gt;Hello world, and Merry Christmas!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;🎅🎅🎅🎅🎅🎅&lt;br /&gt;
-🎄🎄🎄🎄🎄🎄&lt;br /&gt;
-🎁🎁🎁🎁🎁🎁&lt;/p&gt;
 </description>
     </item>
     

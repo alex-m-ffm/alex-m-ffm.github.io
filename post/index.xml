@@ -7,10 +7,122 @@
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
-    <lastBuildDate>Sun, 07 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Feb 2021 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://alex-m-ffm.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to web-scrape data from multiple pages</title>
+      <link>https://alex-m-ffm.github.io/post/2021-02-10-tutorial-webscraping/</link>
+      <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alex-m-ffm.github.io/post/2021-02-10-tutorial-webscraping/</guid>
+      <description>
+&lt;script src=&#34;https://alex-m-ffm.github.io/post/2021-02-10-tutorial-webscraping/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Through my involvement in &lt;a href=&#34;https://correlaid.org/correlaid-x/rhein-main/&#34;&gt;Correlaid Rhein-Main&lt;/a&gt; I received a license to &lt;a href=&#34;https://www.dataquest.io/&#34;&gt;Dataquest&lt;/a&gt; so I took the opportunity to learn some new tricks! While I skipped most of the beginner classes of the “Data Analyst in R” path, I thought the two courses on &lt;a href=&#34;https://app.dataquest.io/course/apis-in-r&#34;&gt;APIs&lt;/a&gt; and &lt;a href=&#34;https://app.dataquest.io/course/scraping-in-r&#34;&gt;web-scraping&lt;/a&gt; might be useful: so far my use of APIs at work mostly was done via packages (or, as in the Bee Observer project, prepared by somebody else), so I was interested to know what’s behind these &lt;code&gt;GET&lt;/code&gt; and &lt;code&gt;POST&lt;/code&gt; commands. While I still had some good learning experiences, I still had the impression that the course had some teething problems and many things were not well explained or described. I will still try to share my comments with the course developers so that hopefully they will improve it for future users - I had done so already via the community page, but apparently this was not the right place… 😒&lt;br /&gt;
+Anyhow… the web-scraping course was luckily much better in my opinion! 😃&lt;br /&gt;
+It teaches well how to use the &lt;code&gt;rvest&lt;/code&gt; package and search for the right html selectors using the inspect tool of your web browser and the &lt;a href=&#34;https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb?hl=de&#34;&gt;selector gadget&lt;/a&gt; for Google Chrome. After that I wanted to immediately jump in and find use-cases at work to implement my new knowledge. One task that came to mind is rather dull and administrative - and thus even more so a good candidate for automation. Within the process of the &lt;a href=&#34;https://www.ecb.europa.eu/pub/projections/html/index.en.html&#34;&gt;macroeconomic projection exercises&lt;/a&gt; the special team coordinating the exercises circulates well in advance of the next projection round a propose calendar outlining the timeline of forecast iterations and high-level meetings. Building on top of this general FTF (Forecast Task Force) calendar, my division, responsible for the projections for the largest five euro area countries, creates another one with more intermediate steps that are relevant for the country experts producing the forecast hands-on. As a guide for when might be the right time to work on the forecast we also enter in this calendar a column with the release dates of important macroeconomic indicators. For a long time this was a rather manual job, which could cost you a few hours to get all the data ready, oftentimes in an otherwise busy period.
+The statistical offices &lt;a href=&#34;https://ec.europa.eu/eurostat/web/main/news/internet-calendar&#34;&gt;Eurostat&lt;/a&gt;, &lt;a href=&#34;https://www.istat.it/en/information-and-services/journalists/release-calendar/press-room-calendar&#34;&gt;Istat&lt;/a&gt; and &lt;a href=&#34;https://ine.es/en/daco/daco41/calen_ics_en.htm&#34;&gt;INE&lt;/a&gt; all offer internet calendars, which can be imported to Outlook, but also be read using the &lt;code&gt;calendar&lt;/code&gt; package. The national statistical offices of the Netherlands (&lt;a href=&#34;https://www.cbs.nl/&#34;&gt;CBS&lt;/a&gt;) and Germany (&lt;a href=&#34;https://www.destatis.de/DE/Home/_inhalt.html&#34;&gt;Destatis&lt;/a&gt;), howevever, only offer their release dates as lists or tables on the website.
+The &lt;a href=&#34;https://www.destatis.de/SiteGlobals/Forms/Suche/Termine/EN/Terminsuche_Formular.html&#34;&gt;annual calendar of Destatis&lt;/a&gt; is in particular tricky, because the list is split over multiple pages.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;images/destatis_1.png&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;page content split over multiple pages accessible via navigation buttons&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;But let’s get to that part later. First let’s just find the selector for the data releases. Using the inspect tool of the browser we see that the items we are interested in are contained within the a div of class &lt;code&gt;row&lt;/code&gt; within a div of class &lt;code&gt;c-result&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;images/destatis_2.png&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;css selector for the required data&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Now let’s start getting our hands dirty in R and load the &lt;code&gt;rvest&lt;/code&gt; and &lt;code&gt;tidyverse&lt;/code&gt; packages.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rvest)
+library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s see what the output of the first page looks like. For that we use &lt;code&gt;read_html&lt;/code&gt; on the URL of the first page, select the nodes as identified above using &lt;code&gt;html_nodes&lt;/code&gt; and convert to text using &lt;code&gt;html_text&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;destatis_calendar_first &amp;lt;- read_html(
+  &amp;quot;https://www.destatis.de/SiteGlobals/Forms/Suche/Termine/EN/Terminsuche_Formular.html&amp;quot;
+) %&amp;gt;% 
+  html_nodes(&amp;quot;.c-result .row&amp;quot;) %&amp;gt;% 
+  html_text()
+
+destatis_calendar_first&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;\n    \n      Persons employed in manufacturing\n      Reporting period: December 2020\n        Date of issue: 2021.02.16  (deadline)\n      \n  &amp;quot;                         
+##  [2] &amp;quot;\n    \n      Indices of wholesale trade prices\n      Reporting period: January 2021\n        Date of issue: 2021.02.17  (deadline)\n      \n  &amp;quot;                          
+##  [3] &amp;quot;\n    \n      Indices of the stock of orders and ranges in manufacturing\n      Reporting period: December 2020\n        Date of issue: 2021.02.18\n      \n  &amp;quot;            
+##  [4] &amp;quot;\n    \n      Quarterly labour market statistics\n      Detailed breakdown\n\n      Reporting period: 4th quarter 2020\n        Date of issue: 2021.02.18\n      \n  &amp;quot;     
+##  [5] &amp;quot;\n    \n      Insolvencies\n      Reporting period: November 2020\n        Date of issue: 2021.02.19  (deadline)\n      \n  &amp;quot;                                              
+##  [6] &amp;quot;\n    \n      Producer price index of industrial products\n      Reporting period: January 2021\n        Date of issue: 2021.02.19\n      \n  &amp;quot;                            
+##  [7] &amp;quot;\n    \n      Gross domestic product \n      Detailed breakdown\n\n      Reporting period: 4th quarter 2020\n        Date of issue: 2021.02.24\n      \n  &amp;quot;                
+##  [8] &amp;quot;\n    \n      Maastricht deficit ratio\n      Reporting period: Year 2020\n        Date of issue: 2021.02.24\n      \n  &amp;quot;                                                  
+##  [9] &amp;quot;\n    \n      Index of orders received\n      provisional release date\n\n      Reporting period: December 2020\n        Date of issue: 2021.02.25  (deadline)\n      \n  &amp;quot;
+## [10] &amp;quot;\n    \n      Traffic accident\n      Reporting period: December 2020\n        Date of issue: 2021.02.25  (deadline)\n      \n  &amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This output still has some issues that should be fixed, like the abundance of line breaks and whitespace, but we can leave this for later. The fact that we have a character vector of length 10 is already going in the direction that we want.&lt;/p&gt;
+&lt;p&gt;Now the question is how we can get to the next pages programatically. For this we will inspect the “next” arrow at the bottom of the page.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;images/destatis_3.png&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;html attribute of the navigation button&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;We see that the forward button is an element with the class &lt;code&gt;forward button&lt;/code&gt; and has as an &lt;code&gt;href&lt;/code&gt; attribute the URL of the next page, however as a relative address (i.e. without the base URL). If you would check on the last possible page of the list, you can see that the (now greyed out) forward button now does not contain an href attribute.&lt;/p&gt;
+&lt;p&gt;So we can define a loop that starts on the first page, reads the data as well as the URL of the following page from the forward button (using &lt;code&gt;html_attr(&#34;href&#34;)&lt;/code&gt;) and then updates the page from which to read. This loop is repeated (with the data appended to the previously scraped data) until the last page is reached where the aforementioned command will return a missing value.
+As discussed before, the content of the rows is a little problematic due to line breaks and spaces, but otherwise is quite structured. Using some string operations and regular expressions we can split the information into three columns, containing the name of the indicator, the reference period of the data release, and the release date.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;base_url &amp;lt;- &amp;quot;https://www.destatis.de/&amp;quot;
+
+destatis_calendar &amp;lt;- read_html(
+  &amp;quot;https://www.destatis.de/SiteGlobals/Forms/Suche/Termine/EN/Terminsuche_Formular.html&amp;quot;
+) 
+
+current_page &amp;lt;- destatis_calendar
+next_endpoint &amp;lt;- destatis_calendar %&amp;gt;% 
+  html_node(&amp;quot;li .forward.button&amp;quot;) %&amp;gt;% 
+  html_attr(&amp;quot;href&amp;quot;)
+
+entries &amp;lt;- tibble(indicator = character(), 
+                  reference_period = character(), 
+                  release = character())
+
+repeat{
+  current_entries &amp;lt;- current_page %&amp;gt;% 
+    html_nodes(&amp;quot;.c-result&amp;quot;) %&amp;gt;% 
+    # I need to get to the second level div
+    html_nodes(&amp;quot;div div&amp;quot;) %&amp;gt;% 
+    html_text() %&amp;gt;% trimws() %&amp;gt;%
+    as_tibble() %&amp;gt;%
+    extract(value, into = c(&amp;quot;indicator&amp;quot;, &amp;quot;reference_period&amp;quot;, &amp;quot;release&amp;quot;),
+            regex = &amp;quot;^(.*\\s.*)\\s*Reporting period:(.*)\\s*Date of issue: (\\d{4}.\\d{2}\\.\\d{2})&amp;quot;)
+  # I need to use the general whitespace character \s as the normal linebreak \n somehow didn`t work.
+  
+  entries &amp;lt;- union(entries, current_entries)
+  
+  next_endpoint &amp;lt;- current_page %&amp;gt;% 
+    html_node(&amp;quot;li .forward.button&amp;quot;) %&amp;gt;% 
+    html_attr(&amp;quot;href&amp;quot;)
+  
+  if(is.na(next_endpoint)) break # break the loop if we are on the last page
+
+  # update page by following the forward button
+  current_page &amp;lt;- read_html(paste0(base_url, next_endpoint))
+}
+
+rm(current_page, current_entries, next_endpoint)
+
+destatis_releases &amp;lt;- entries %&amp;gt;% 
+  mutate(release = as.Date(release, &amp;quot;%Y.%m.%d&amp;quot;),
+         indicator = trimws(indicator))
+
+head(destatis_releases)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 3
+##   indicator                                        reference_period   release   
+##   &amp;lt;chr&amp;gt;                                            &amp;lt;chr&amp;gt;              &amp;lt;date&amp;gt;    
+## 1 &amp;quot;Persons employed in manufacturing&amp;quot;              &amp;quot; December 2020&amp;quot;   2021-02-16
+## 2 &amp;quot;Indices of wholesale trade prices&amp;quot;              &amp;quot; January 2021&amp;quot;    2021-02-17
+## 3 &amp;quot;Indices of the stock of orders and ranges in m~ &amp;quot; December 2020&amp;quot;   2021-02-18
+## 4 &amp;quot;Quarterly labour market statistics\n      Deta~ &amp;quot; 4th quarter 202~ 2021-02-18
+## 5 &amp;quot;Insolvencies&amp;quot;                                   &amp;quot; November 2020&amp;quot;   2021-02-19
+## 6 &amp;quot;Producer price index of industrial products&amp;quot;    &amp;quot; January 2021&amp;quot;    2021-02-19&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I hope you found this tutorial useful!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>The ECB Corporate Telephone Survey (CTS)</title>
