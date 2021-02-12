@@ -2,67 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Alex Melemenidis&#39;s homepage</title>
-    <link>https://alex-m-ffm.github.io/</link>
+    <link>https://alex.melemenidis.de/</link>
     <description>Recent content on Alex Melemenidis&#39;s homepage</description>
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
     <lastBuildDate>Wed, 10 Feb 2021 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://alex-m-ffm.github.io/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://alex.melemenidis.de/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Posts</title>
-      <link>https://alex-m-ffm.github.io/post/</link>
+      <link>https://alex.melemenidis.de/post/</link>
       <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://alex-m-ffm.github.io/post/</guid>
+      <guid>https://alex.melemenidis.de/post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>https://alex-m-ffm.github.io/project/</link>
+      <link>https://alex.melemenidis.de/project/</link>
       <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://alex-m-ffm.github.io/project/</guid>
+      <guid>https://alex.melemenidis.de/project/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent &amp; Upcoming Talks</title>
-      <link>https://alex-m-ffm.github.io/talk/</link>
+      <link>https://alex.melemenidis.de/talk/</link>
       <pubDate>Sat, 07 Nov 2020 13:00:00 +0000</pubDate>
       
-      <guid>https://alex-m-ffm.github.io/talk/</guid>
+      <guid>https://alex.melemenidis.de/talk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Courses</title>
-      <link>https://alex-m-ffm.github.io/courses/</link>
+      <link>https://alex.melemenidis.de/courses/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       
-      <guid>https://alex-m-ffm.github.io/courses/</guid>
+      <guid>https://alex.melemenidis.de/courses/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Slides</title>
-      <link>https://alex-m-ffm.github.io/slides/</link>
+      <link>https://alex.melemenidis.de/slides/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://alex-m-ffm.github.io/slides/</guid>
+      <guid>https://alex.melemenidis.de/slides/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Privacy Policy</title>
-      <link>https://alex-m-ffm.github.io/privacy/</link>
+      <link>https://alex.melemenidis.de/privacy/</link>
       <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
       
-      <guid>https://alex-m-ffm.github.io/privacy/</guid>
+      <guid>https://alex.melemenidis.de/privacy/</guid>
       <description>&lt;p&gt;All the following points should be read as “to the best of my knowledge”. I am not a website expert, so I can’t vouch for how this website is actually implemented. I can only tell you about my intentions.&lt;/p&gt;
 &lt;h2 id=&#34;what-personal-data-do-i-collect&#34;&gt;What personal data do I collect?&lt;/h2&gt;
 &lt;p&gt;I may collect the following personal information from you:&lt;/p&gt;
@@ -98,10 +98,10 @@
     
     <item>
       <title>Publications</title>
-      <link>https://alex-m-ffm.github.io/publication/</link>
+      <link>https://alex.melemenidis.de/publication/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://alex-m-ffm.github.io/publication/</guid>
+      <guid>https://alex.melemenidis.de/publication/</guid>
       <description></description>
     </item>
     

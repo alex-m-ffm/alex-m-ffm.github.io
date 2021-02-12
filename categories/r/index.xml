@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on Alex Melemenidis&#39;s homepage</title>
-    <link>https://alex-m-ffm.github.io/categories/r/</link>
+    <link>https://alex.melemenidis.de/categories/r/</link>
     <description>Recent content in R on Alex Melemenidis&#39;s homepage</description>
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
     <lastBuildDate>Wed, 10 Feb 2021 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://alex-m-ffm.github.io/categories/r/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://alex.melemenidis.de/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to web-scrape data from multiple pages</title>
-      <link>https://alex-m-ffm.github.io/post/2021-02-10-tutorial-webscraping/</link>
+      <link>https://alex.melemenidis.de/post/2021-02-10-tutorial-webscraping/</link>
       <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://alex-m-ffm.github.io/post/2021-02-10-tutorial-webscraping/</guid>
+      <guid>https://alex.melemenidis.de/post/2021-02-10-tutorial-webscraping/</guid>
       <description>
-&lt;script src=&#34;https://alex-m-ffm.github.io/post/2021-02-10-tutorial-webscraping/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://alex.melemenidis.de/post/2021-02-10-tutorial-webscraping/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;Through my involvement in &lt;a href=&#34;https://correlaid.org/correlaid-x/rhein-main/&#34;&gt;Correlaid Rhein-Main&lt;/a&gt; I received a license to &lt;a href=&#34;https://www.dataquest.io/&#34;&gt;Dataquest&lt;/a&gt; so I took the opportunity to learn some new tricks! While I skipped most of the beginner classes of the “Data Analyst in R” path, I thought the two courses on &lt;a href=&#34;https://app.dataquest.io/course/apis-in-r&#34;&gt;APIs&lt;/a&gt; and &lt;a href=&#34;https://app.dataquest.io/course/scraping-in-r&#34;&gt;web-scraping&lt;/a&gt; might be useful: so far my use of APIs at work mostly was done via packages (or, as in the Bee Observer project, prepared by somebody else), so I was interested to know what’s behind these &lt;code&gt;GET&lt;/code&gt; and &lt;code&gt;POST&lt;/code&gt; commands. While I still had some good learning experiences, I still had the impression that the course had some teething problems and many things were not well explained or described. I will still try to share my comments with the course developers so that hopefully they will improve it for future users - I had done so already via the community page, but apparently this was not the right place… 😒&lt;br /&gt;
@@ -126,12 +126,12 @@ head(destatis_releases)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Contributing to Open Source</title>
-      <link>https://alex-m-ffm.github.io/post/2021-01-25-contributing-to-open-source/</link>
+      <link>https://alex.melemenidis.de/post/2021-01-25-contributing-to-open-source/</link>
       <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://alex-m-ffm.github.io/post/2021-01-25-contributing-to-open-source/</guid>
+      <guid>https://alex.melemenidis.de/post/2021-01-25-contributing-to-open-source/</guid>
       <description>
-&lt;script src=&#34;https://alex-m-ffm.github.io/post/2021-01-25-contributing-to-open-source/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://alex.melemenidis.de/post/2021-01-25-contributing-to-open-source/index.en_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;Last week I received the notification that an issue with the &lt;code&gt;dbplyr&lt;/code&gt; package in R, for which I had contributed to the &lt;a href=&#34;https://github.com/tidyverse/dbplyr/issues/534&#34;&gt;discussion&lt;/a&gt;, was closed and that the great Hadley Wickham had updated the code! 😎&lt;br /&gt;
@@ -143,10 +143,10 @@ Can’t wait until the code change is also reflected on CRAN, as loading a packa
     
     <item>
       <title>Hello World</title>
-      <link>https://alex-m-ffm.github.io/post/2020-12-25-hello-world/</link>
+      <link>https://alex.melemenidis.de/post/2020-12-25-hello-world/</link>
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://alex-m-ffm.github.io/post/2020-12-25-hello-world/</guid>
+      <guid>https://alex.melemenidis.de/post/2020-12-25-hello-world/</guid>
       <description>
 
 

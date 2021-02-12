@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sensors on Alex Melemenidis&#39;s homepage</title>
-    <link>https://alex-m-ffm.github.io/tags/sensors/</link>
+    <link>https://alex.melemenidis.de/tags/sensors/</link>
     <description>Recent content in sensors on Alex Melemenidis&#39;s homepage</description>
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
     <lastBuildDate>Thu, 24 Dec 2020 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://alex-m-ffm.github.io/tags/sensors/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://alex.melemenidis.de/tags/sensors/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bee Observer</title>
-      <link>https://alex-m-ffm.github.io/project/bee-observer/</link>
+      <link>https://alex.melemenidis.de/project/bee-observer/</link>
       <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://alex-m-ffm.github.io/project/bee-observer/</guid>
+      <guid>https://alex.melemenidis.de/project/bee-observer/</guid>
       <description>&lt;p&gt;Through my MeetUp newsletter I randomly stumbled upon the Rhein-Main local chapter of &lt;a href=&#34;https://correlaid.org/&#34;&gt;Correlaid&lt;/a&gt;, a non-profit organisation that is supporting other NPOs in data science and digital projects.
 For my thesis project I joined the on-going collaboration with the University of Bremen on the project &lt;a href=&#34;http://www.cognitive-neuroinformatics.com/de/forschung/projekte/sensorbeuten&#34;&gt;Bee Observer (BOB)&lt;/a&gt;. Through sensors in beehives this project aims at helping beekeepers in their regular activities and create a large dataset for bee research.&lt;/p&gt;
 &lt;p&gt;Read the thesis &lt;a href=&#34;https://alex-m-ffm.github.io/bob-thesis/&#34;&gt;HERE&lt;/a&gt;.&lt;/p&gt;
