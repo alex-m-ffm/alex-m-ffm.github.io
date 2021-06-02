@@ -98,6 +98,56 @@
   </url>
   
   <url>
+    <loc>https://alex.melemenidis.de/publication_types/1/</loc>
+    <lastmod>2021-02-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex.melemenidis.de/authors/alexander-goncharskiy/</loc>
+    <lastmod>2021-02-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex.melemenidis.de/tags/anomaly-detection/</loc>
+    <lastmod>2021-02-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex.melemenidis.de/authors/carolin-johannsen/</loc>
+    <lastmod>2021-02-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex.melemenidis.de/authors/diren-senger/</loc>
+    <lastmod>2021-02-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex.melemenidis.de/publication_types/</loc>
+    <lastmod>2021-02-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex.melemenidis.de/publication/</loc>
+    <lastmod>2021-02-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex.melemenidis.de/tags/sensor-data/</loc>
+    <lastmod>2021-02-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex.melemenidis.de/authors/thorsten-kluss/</loc>
+    <lastmod>2021-02-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alex.melemenidis.de/publication/bee-anomaly/</loc>
+    <lastmod>2021-02-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://alex.melemenidis.de/tags/ecb/</loc>
     <lastmod>2021-02-07T12:13:02+01:00</lastmod>
   </url>
@@ -163,11 +213,6 @@
   </url>
   
   <url>
-    <loc>https://alex.melemenidis.de/tags/anomaly-detection/</loc>
-    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://alex.melemenidis.de/project/bee-observer/</loc>
     <lastmod>2020-12-24T00:00:00+00:00</lastmod>
   </url>
@@ -230,14 +275,6 @@
   <url>
     <loc>https://alex.melemenidis.de/privacy/</loc>
     <lastmod>2018-06-28T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alex.melemenidis.de/publication_types/</loc>
-  </url>
-  
-  <url>
-    <loc>https://alex.melemenidis.de/publication/</loc>
   </url>
   
 </urlset>
