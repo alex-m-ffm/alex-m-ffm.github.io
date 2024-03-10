@@ -7,10 +7,64 @@
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
-    <lastBuildDate>Sun, 25 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Oct 2023 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://alex.melemenidis.de/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AI</title>
+      <link>https://alex.melemenidis.de/tags/ai/</link>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alex.melemenidis.de/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Business Intelligence</title>
+      <link>https://alex.melemenidis.de/tags/business-intelligence/</link>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alex.melemenidis.de/tags/business-intelligence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud</title>
+      <link>https://alex.melemenidis.de/tags/cloud/</link>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alex.melemenidis.de/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computer Vision</title>
+      <link>https://alex.melemenidis.de/tags/computer-vision/</link>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alex.melemenidis.de/tags/computer-vision/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deloitte</title>
+      <link>https://alex.melemenidis.de/tags/deloitte/</link>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alex.melemenidis.de/tags/deloitte/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wildlife Conservation</title>
+      <link>https://alex.melemenidis.de/tags/wildlife-conservation/</link>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alex.melemenidis.de/tags/wildlife-conservation/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ECB</title>

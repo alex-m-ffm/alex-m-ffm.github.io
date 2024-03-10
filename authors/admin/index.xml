@@ -7,10 +7,52 @@
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
-    <lastBuildDate>Thu, 24 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Oct 2023 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://alex.melemenidis.de/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>pro-bono project at Deloitte - Wildlife conservation with AI and Cloud technologies</title>
+      <link>https://alex.melemenidis.de/post/2023-10-15-wildlife-conservation-with-ai/</link>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alex.melemenidis.de/post/2023-10-15-wildlife-conservation-with-ai/</guid>
+      <description>
+
+
+&lt;div id=&#34;deloittes-biodiversity-dashboard-lays-the-groundwork-for-data-driven-community-based-conservation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Deloitte’s Biodiversity Dashboard lays the groundwork for data-driven community-based conservation&lt;/h2&gt;
+&lt;p&gt;During my tenure at Deloitte I was so lucky to be leading a small project team working with a large environmental NGO on a pro-bono basis.&lt;/p&gt;
+&lt;p&gt;The project premise was the following:&lt;/p&gt;
+&lt;p&gt;Since Namibia’s independence in the 1990s, wildlife conservation followed a community-driven approach. Rural communities can declare themselves ‘Communal Conservancies’, a special legal entity with specifically defined geographic boundaries. With this legal status, communities have to commit to specific nature conservation targets and be monitored against them by the government or authorised actors (such as this NGO). In turn they considered sole leaseholders of the land, are allowed to create Safari lodges, heritage villages and allow hunting (in line with quotas) and can keep all profits from tourism for themselves.
+With the introduction of the concept the populations of many endangered species in Namibia recovered and the buy-in of communities was strong, with now 86 registered communal conservancies by 2024, covering around 20.2% of the country according to the Association of organisations supporting communities, &lt;a href=&#34;https://www.nacso.org.na/&#34;&gt;NACSO&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;During the Covid-19 pandemic, however, the concept showed its weaknesses due to the reliance on tourism income. Without being able to support their livelihoods, communities were more likely to decrease their efforts of conserving flora and fauna.
+To provide an additional income source, the client introduced a new program, paying communities directly from donations and development banks for additional &lt;strong&gt;efforts that can be validated by data&lt;/strong&gt;.&lt;br /&gt;
+The communities and the NGO signed additional contracts relating to specific parts of the community land that should remain free of human interference. Namely, the communities had to record regular ranger surveys into these parcels using a smartphone app, documenting the GPS routes as well as any observations made along the way. Second, communities had to should deploy &lt;strong&gt;camera traps&lt;/strong&gt; to monitor the presence of endangered species. We were then tasked to combine and process this data in a most efficient way to determine whether communities were compliant.&lt;/p&gt;
+&lt;div class=&#34;float&#34;&gt;
+&lt;img src=&#34;furkanvari-PRo3VY-PKBE-unsplash.jpg&#34; alt=&#34;A camera trap; Photo by furkanvari on Unsplash&#34; /&gt;
+&lt;div class=&#34;figcaption&#34;&gt;A camera trap; Photo by furkanvari on Unsplash&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;
+We implemented this as a cloud-based solution in AWS, harnessing computer vision models and a business intelligence solution with some custom add-ons.
+We also added as a third data source freely available &lt;strong&gt;remote sensing imagery&lt;/strong&gt; from the ESA Sentinel missions, to exclude signs of fire-clearing on the specially designated land.&lt;/p&gt;
+&lt;div class=&#34;float&#34;&gt;
+&lt;img src=&#34;usgs-_HZo1HuTb2s-unsplash.jpg&#34; alt=&#34;Remote sensing imagery; Photo by USGS on Unsplash&#34; /&gt;
+&lt;div class=&#34;figcaption&#34;&gt;Remote sensing imagery; Photo by USGS on Unsplash&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;
+Check out the short demo video showing the solution we built.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/YAQmwfZ7i2I&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Read the &lt;a href=&#34;https://www2.deloitte.com/de/de/pages/risk/solutions/effective-wildlife-conservation-with-biodiversity-dashboard.html&#34;&gt;short article&lt;/a&gt; on the Deloitte aiStudio website for more information.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>The semiconductor shortage and its implication for euro area trade, production and prices</title>

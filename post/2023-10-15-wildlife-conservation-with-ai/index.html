@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academia 4.3.1">
+  <meta name="generator" content="Hugo 0.79.1" />
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Alexandros Melemenidis">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="The Deloitte solution integrates data from multiple sources, monitors community conservation efforts using computer vision, calculates performance payments to be disbursed to compensate communities for their conservation efforts, and visualizes the data in a mobile-friendly, interactive dashboard.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://alex.melemenidis.de/post/2023-10-15-wildlife-conservation-with-ai/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#fc6f5c">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academia.min.bb5ab09ea511c063bce928c9c03b5ec3.css">
+
+  
+
+  
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://alex.melemenidis.de/post/2023-10-15-wildlife-conservation-with-ai/">
+
+  
+  
+  
+  
+    
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Alex Melemenidis&#39;s homepage">
+  <meta property="og:url" content="https://alex.melemenidis.de/post/2023-10-15-wildlife-conservation-with-ai/">
+  <meta property="og:title" content="pro-bono project at Deloitte - Wildlife conservation with AI and Cloud technologies | Alex Melemenidis&#39;s homepage">
+  <meta property="og:description" content="The Deloitte solution integrates data from multiple sources, monitors community conservation efforts using computer vision, calculates performance payments to be disbursed to compensate communities for their conservation efforts, and visualizes the data in a mobile-friendly, interactive dashboard."><meta property="og:image" content="https://alex.melemenidis.de/post/2023-10-15-wildlife-conservation-with-ai/featured.jpg">
+  <meta property="twitter:image" content="https://alex.melemenidis.de/post/2023-10-15-wildlife-conservation-with-ai/featured.jpg"><meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2023-10-15T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2023-10-15T16:31:34&#43;02:00">
+  
+
+  
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#fc6f5c",
+          "text": "#fff"
+        },
+        "button": {
+          "background": "#fff",
+          "text": "#fc6f5c"
+        }
+      },
+      "theme": "classic",
+      "content": {
+        "message": "This website uses cookies to ensure you get the best experience on our website.",
+        "dismiss": "Got it!",
+        "link": "Learn more",
+        "href": "/privacy/"
+      }
+    })});
+</script>
+
+
+
+  
+
+
+
+
+
+  <title>pro-bono project at Deloitte - Wildlife conservation with AI and Cloud technologies | Alex Melemenidis&#39;s homepage</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Alex Melemenidis&#39;s homepage</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article py-5" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container split-header">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+        <img class="img-fluid w-100" src="/post/2023-10-15-wildlife-conservation-with-ai/featured_hu5459c0360c2b0cb7a147d2df0eb350ca_664138_680x500_fill_q90_lanczos_smart1.jpg" itemprop="image" alt="">
+        <span
+          class="article-header-caption">Photo by <!-- raw HTML omitted -->Francesco<!-- raw HTML omitted --> on <!-- raw HTML omitted -->Unsplash<!-- raw HTML omitted --></span>
+    </div>
+    <div class="col-lg-8">
+      <h1 itemprop="name">pro-bono project at Deloitte - Wildlife conservation with AI and Cloud technologies</h1>
+
+      
+      <p class="page-subtitle">More effective Wildlife Conservation with AI &amp; cloud</p>
+      
+
+      
+
+
+
+<meta content="2023-10-15 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2023-10-15 16:31:34 &#43;0200 CEST" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/admin/">Alexandros Melemenidis</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    <time>Oct 15, 2023</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://alex.melemenidis.de/post/2023-10-15-wildlife-conservation-with-ai/&amp;text=pro-bono%20project%20at%20Deloitte%20-%20Wildlife%20conservation%20with%20AI%20and%20Cloud%20technologies" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://alex.melemenidis.de/post/2023-10-15-wildlife-conservation-with-ai/&amp;t=pro-bono%20project%20at%20Deloitte%20-%20Wildlife%20conservation%20with%20AI%20and%20Cloud%20technologies" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=pro-bono%20project%20at%20Deloitte%20-%20Wildlife%20conservation%20with%20AI%20and%20Cloud%20technologies&amp;body=https://alex.melemenidis.de/post/2023-10-15-wildlife-conservation-with-ai/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://alex.melemenidis.de/post/2023-10-15-wildlife-conservation-with-ai/&amp;title=pro-bono%20project%20at%20Deloitte%20-%20Wildlife%20conservation%20with%20AI%20and%20Cloud%20technologies" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=pro-bono%20project%20at%20Deloitte%20-%20Wildlife%20conservation%20with%20AI%20and%20Cloud%20technologies%20https://alex.melemenidis.de/post/2023-10-15-wildlife-conservation-with-ai/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://alex.melemenidis.de/post/2023-10-15-wildlife-conservation-with-ai/&amp;title=pro-bono%20project%20at%20Deloitte%20-%20Wildlife%20conservation%20with%20AI%20and%20Cloud%20technologies" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+    </div>
+  </div>
+</div>
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+
+<div id="deloittes-biodiversity-dashboard-lays-the-groundwork-for-data-driven-community-based-conservation" class="section level2">
+<h2>Deloitte’s Biodiversity Dashboard lays the groundwork for data-driven community-based conservation</h2>
+<p>During my tenure at Deloitte I was so lucky to be leading a small project team working with a large environmental NGO on a pro-bono basis.</p>
+<p>The project premise was the following:</p>
+<p>Since Namibia’s independence in the 1990s, wildlife conservation followed a community-driven approach. Rural communities can declare themselves ‘Communal Conservancies’, a special legal entity with specifically defined geographic boundaries. With this legal status, communities have to commit to specific nature conservation targets and be monitored against them by the government or authorised actors (such as this NGO). In turn they considered sole leaseholders of the land, are allowed to create Safari lodges, heritage villages and allow hunting (in line with quotas) and can keep all profits from tourism for themselves.
+With the introduction of the concept the populations of many endangered species in Namibia recovered and the buy-in of communities was strong, with now 86 registered communal conservancies by 2024, covering around 20.2% of the country according to the Association of organisations supporting communities, <a href="https://www.nacso.org.na/">NACSO</a>.</p>
+<p>During the Covid-19 pandemic, however, the concept showed its weaknesses due to the reliance on tourism income. Without being able to support their livelihoods, communities were more likely to decrease their efforts of conserving flora and fauna.
+To provide an additional income source, the client introduced a new program, paying communities directly from donations and development banks for additional <strong>efforts that can be validated by data</strong>.<br />
+The communities and the NGO signed additional contracts relating to specific parts of the community land that should remain free of human interference. Namely, the communities had to record regular ranger surveys into these parcels using a smartphone app, documenting the GPS routes as well as any observations made along the way. Second, communities had to should deploy <strong>camera traps</strong> to monitor the presence of endangered species. We were then tasked to combine and process this data in a most efficient way to determine whether communities were compliant.</p>
+<div class="float">
+<img src="furkanvari-PRo3VY-PKBE-unsplash.jpg" alt="A camera trap; Photo by furkanvari on Unsplash" />
+<div class="figcaption">A camera trap; Photo by furkanvari on Unsplash</div>
+</div>
+<p><br />
+We implemented this as a cloud-based solution in AWS, harnessing computer vision models and a business intelligence solution with some custom add-ons.
+We also added as a third data source freely available <strong>remote sensing imagery</strong> from the ESA Sentinel missions, to exclude signs of fire-clearing on the specially designated land.</p>
+<div class="float">
+<img src="usgs-_HZo1HuTb2s-unsplash.jpg" alt="Remote sensing imagery; Photo by USGS on Unsplash" />
+<div class="figcaption">Remote sensing imagery; Photo by USGS on Unsplash</div>
+</div>
+<p><br />
+Check out the short demo video showing the solution we built.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/YAQmwfZ7i2I" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p><br />
+Read the <a href="https://www2.deloitte.com/de/de/pages/risk/solutions/effective-wildlife-conservation-with-biodiversity-dashboard.html">short article</a> on the Deloitte aiStudio website for more information.</p>
+</div>
+
+    </div>
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/deloitte/">Deloitte</a>
+  
+  <a class="badge badge-light" href="/tags/ai/">AI</a>
+  
+  <a class="badge badge-light" href="/tags/computer-vision/">Computer Vision</a>
+  
+  <a class="badge badge-light" href="/tags/wildlife-conservation/">Wildlife Conservation</a>
+  
+  <a class="badge badge-light" href="/tags/business-intelligence/">Business Intelligence</a>
+  
+  <a class="badge badge-light" href="/tags/cloud/">Cloud</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu6bb3d8d55dd3e320d2abc8ab1543477e_109104_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="https://alex.melemenidis.de/">Alexandros Melemenidis</a></h5>
+      
+      <p class="card-text" itemprop="description">Make the data work for YOU.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="/#contact" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://scholar.google.co.uk/citations?user=_yGta4AAAAAJ" target="_blank" rel="noopener">
+              <i class="fab fa-google-scholar"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.linkedin.com/in/alexandros-melemenidis-18a6b6183/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.xing.com/profile/Alexandros_Melemenidis" target="_blank" rel="noopener">
+              <i class="fab fa-xing"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/alex-m-ffm" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.youtube.com/channel/UC7p805M43uY6WrJ29v3Fe7g" target="_blank" rel="noopener">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academia.min.e4fc229c2f28284fc2dfa5b66a52b765.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        
+        <p class="powered-by">
+          <a href="/privacy/">Privacy Policy</a>
+        </p>
+        
+        <p>
+          Copyright © 2024 &middot; 
+          Powered by
+          <a href="https://gethugothemes.com" target="_blank" rel="noopener">Gethugothemes</a>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <ul class="list-inline network-icon text-right">
+          
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
