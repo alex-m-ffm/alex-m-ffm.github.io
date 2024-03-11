@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academia 4.3.1">
+  <meta name="generator" content="Hugo 0.79.1" />
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Alexandros Melemenidis">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Do you want to create AI art of yourself on your local machine? Read this blog post to learn how I did it.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://alex.melemenidis.de/post/2024-03-11-trial-and-error-journey-of-ai-art/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#fc6f5c">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academia.min.bb5ab09ea511c063bce928c9c03b5ec3.css">
+
+  
+
+  
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://alex.melemenidis.de/post/2024-03-11-trial-and-error-journey-of-ai-art/">
+
+  
+  
+  
+  
+    
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Alex Melemenidis&#39;s homepage">
+  <meta property="og:url" content="https://alex.melemenidis.de/post/2024-03-11-trial-and-error-journey-of-ai-art/">
+  <meta property="og:title" content="My trial-and-error journey of creating AI art of myself using Open Source models and tools | Alex Melemenidis&#39;s homepage">
+  <meta property="og:description" content="Do you want to create AI art of yourself on your local machine? Read this blog post to learn how I did it."><meta property="og:image" content="https://alex.melemenidis.de/post/2024-03-11-trial-and-error-journey-of-ai-art/featured.png">
+  <meta property="twitter:image" content="https://alex.melemenidis.de/post/2024-03-11-trial-and-error-journey-of-ai-art/featured.png"><meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2024-03-11T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2024-03-11T10:00:00&#43;02:00">
+  
+
+  
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#fc6f5c",
+          "text": "#fff"
+        },
+        "button": {
+          "background": "#fff",
+          "text": "#fc6f5c"
+        }
+      },
+      "theme": "classic",
+      "content": {
+        "message": "This website uses cookies to ensure you get the best experience on our website.",
+        "dismiss": "Got it!",
+        "link": "Learn more",
+        "href": "/privacy/"
+      }
+    })});
+</script>
+
+
+
+  
+
+
+
+
+
+  <title>My trial-and-error journey of creating AI art of myself using Open Source models and tools | Alex Melemenidis&#39;s homepage</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Alex Melemenidis&#39;s homepage</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article py-5" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container split-header">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+        <img class="img-fluid w-100" src="/post/2024-03-11-trial-and-error-journey-of-ai-art/featured_hue6999b2f9fa5fcc0fbbbcc29781e78b0_408429_680x500_fill_q90_lanczos_smart1_2.png" itemprop="image" alt="">
+        <span
+          class="article-header-caption">' Created using a finetuned model based on StableDiffusion 1.5 by RunwayML Prompt: portrait of (ohwx man) at holi festival in india, color dust, highly detailed, 8k Negative prompt: earrings, piercings, glasses, bad anatomy, ugly, deformed, desfigured, distorted face, poorly drawn hands, poorly drawn face, poorly drawn feet, blurry, low quality, low definition, lowres, out of frame, out of image, cropped, cut off, signature, watermark '</span>
+    </div>
+    <div class="col-lg-8">
+      <h1 itemprop="name">My trial-and-error journey of creating AI art of myself using Open Source models and tools</h1>
+
+      
+      <p class="page-subtitle">How I got here and where to go next</p>
+      
+
+      
+
+
+
+<meta content="2024-03-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2024-03-11 10:00:00 &#43;0200 &#43;0200" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/admin/">Alexandros Melemenidis</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    <time>Mar 11, 2024</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://alex.melemenidis.de/post/2024-03-11-trial-and-error-journey-of-ai-art/&amp;text=My%20trial-and-error%20journey%20of%20creating%20AI%20art%20of%20myself%20using%20Open%20Source%20models%20and%20tools" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://alex.melemenidis.de/post/2024-03-11-trial-and-error-journey-of-ai-art/&amp;t=My%20trial-and-error%20journey%20of%20creating%20AI%20art%20of%20myself%20using%20Open%20Source%20models%20and%20tools" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=My%20trial-and-error%20journey%20of%20creating%20AI%20art%20of%20myself%20using%20Open%20Source%20models%20and%20tools&amp;body=https://alex.melemenidis.de/post/2024-03-11-trial-and-error-journey-of-ai-art/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://alex.melemenidis.de/post/2024-03-11-trial-and-error-journey-of-ai-art/&amp;title=My%20trial-and-error%20journey%20of%20creating%20AI%20art%20of%20myself%20using%20Open%20Source%20models%20and%20tools" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=My%20trial-and-error%20journey%20of%20creating%20AI%20art%20of%20myself%20using%20Open%20Source%20models%20and%20tools%20https://alex.melemenidis.de/post/2024-03-11-trial-and-error-journey-of-ai-art/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://alex.melemenidis.de/post/2024-03-11-trial-and-error-journey-of-ai-art/&amp;title=My%20trial-and-error%20journey%20of%20creating%20AI%20art%20of%20myself%20using%20Open%20Source%20models%20and%20tools" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+    </div>
+  </div>
+</div>
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+
+<p><em>Caveat: You need a computer with a graphics card with a GPU and at least 8GB VRAM. If not you can at least profit from the code-based part in Google Colab.</em></p>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>Generative AI has taken the world by storm, opening up new realms of creativity and innovation. From chatbots powered by large language models (LLMs) to text-to-image models like Stable Diffusion, the possibilities seem boundless. The allure of AI in the art world has captivated enthusiasts, offering a unique blend of technology and creativity. In this blog post, I’ll share my journey of creating AI art of myself using open source models and tools, such as Stable Diffusion, Dreambooth, and the user-friendly GUI-based tool “Automatic1111.”</p>
+</div>
+<div id="the-catalyst-a-black-friday-gaming-pc" class="section level2">
+<h2>The Catalyst: A Black Friday Gaming PC</h2>
+<p>Last Black Friday, I decided invest in a <a href="https://support.hp.com/de-de/product/details/omen-by-hp-25l-gaming-desktop-pc-gt15-1000i/model/2101441844?sku=8R2T0EA">gaming desktop</a> equipped with a powerful GPU, initially to improve my video editing workflow (which can already be witnessed in my recent <a href="https://youtu.be/YXaXeL5XsDE">Thailand travel video</a>). But one other reason for the investment was that I also wanted to take the plunge into the world of generative AI and be able to test these powerful models locally.This decision was driven by the desire to explore the creative potential of AI models and algorithms, especially those designed for transforming images and generating unique pieces of digital art.</p>
+</div>
+<div id="learning-the-ropes" class="section level2">
+<h2>Learning the Ropes</h2>
+<p>Armed with my new gaming laptop, I embarked on a journey of self-discovery through various Udemy courses dedicated to generative AI. In terms of text-to-image models I followed the course <a href="https://www.udemy.com/course/master-ai-image-generation-using-stable-diffusion/?kw=Master+AI+Image&amp;src=sac">Master AI image generation using Stable Diffusion</a> which gave a good overview and had excellent Google Colab notebooks with example implementations.
+The course provided me with a foundational understanding of the tools and techniques involved in using GenAI. At the time, however, I was still busy with work and looking for a new job so that I could not find sufficient time to test these tools on my new PC.</p>
+</div>
+<div id="overcoming-hurdles" class="section level2">
+<h2>Overcoming Hurdles</h2>
+<p>When I came back to the topic, I wanted to play with image generation models using a graphical user interface (GUI) tool rather than code, since creating these images involves a lot of trial and error and changing settings and that works much better using GUI-based tools with buttons and sliders than adjusting code snippets all the time. On YouTube I stumbled over discussions on <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">Automatic1111</a> and how to also use Dreambooth to finetune an existing model on new images.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/3cvP7yJotUM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p><br />
+</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/9Nu5tUl2zQw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p><br />
+The initial stages of my exploration were not without their share of hurdles. Wrestling with Python dependencies and configuring the right settings proved to be a daunting task. It took me a while to get things running, in particular installing the <code>xformers</code> package and needed a few trips through Google &amp; StackOverflow to get it to work (and unfortunately have forgotten by now what was the trick 😅), but finally succeeded.</p>
+<p>Then I checked out some popular video tutorials by <a href="https://www.youtube.com/@OlivioSarikas">Olivio Sarikas</a> and <a href="https://www.youtube.com/@SECourses">Dr. Furkan Gözükara</a>, which helped explaining the menus and settings and the general process to use the Dreambooth extension.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/Bdl-jWR3Ukc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p><br />
+However, since the videos were produced, Automatic1111 was updated, with changes to the menus and often also to the default options for many settings, making it more difficult to reproduce the results shown in the videos. While I managed to create some interesting pictures using the text-to-image functionality of the models, I was not really able to fine-tune a model to my face, either because the results looked bad or because the process would simply take too long on my system with only 8GB available with my GPU.<br />
+So only recently I took another go at it and remembered that refining with Dreambooth was also featured in the Udemy course I did last year, and revisited the Google Colab notebook to re-run it with my own training data.<br />
+Have a look into <a href="https://colab.research.google.com/drive/1jeuzMNWOHys_ciWzOj78daTBmJuqkxAO?usp=sharing"><strong>my adjusted copy of that notebook</strong></a>. There you can fine-tune the StableDiffusion 1.5 model (or any other model available on <a href="https://huggingface.co/models?pipeline_tag=text-to-image&amp;sort=trending">HuggingFace</a>) with your own data. Then you can also copy the created model checkpoint into your Google Drive to later download it to your local machine and use it in Automatic1111.<br />
+One additional step is needed before using the downloaded model locally, which is converting the .ckpt file into a .safetensors file, otherwise Automatic1111 will throw an error, at least it did for me. I used the tool <a href="https://github.com/diStyApps/Safe-and-Stable-Ckpt2Safetensors-Conversion-Tool-GUI">tool</a> to perform the conversion.</p>
+</div>
+<div id="the-breakthrough-creating-impressive-ai-art" class="section level2">
+<h2>The Breakthrough: Creating Impressive AI Art</h2>
+<p>After navigating the intricacies of generative AI, I finally achieved a breakthrough, producing impressive AI art of myself using Stable Diffusion, Dreambooth, and the intuitive GUI-based tool “Automatic1111.” The amalgamation of these open source models and tools allowed me to transcend traditional boundaries and explore the endless possibilities of self-expression through artificial intelligence.</p>
+<p><img src="00011-2157247297.png" style="width:40.0%" alt="Prompt: illustration of ohwx man, like obama yes we can poster, realistic, blue and red" /> <img src="00017-4088469429.png" style="width:40.0%" alt="Prompt: (ohwx man) as the simpsons character, glasses" /> 
+<img src="00031-4033097712.png" style="width:40.0%" alt="Prompt: 2x2 grid of portraits of (ohwx man), popart by Andy Warhol" /> <img src="00030-1322871741.png" style="width:40.0%" alt="(ohwx man) as muppet show character" /></p>
+<p><strong>Learnings so far:</strong></p>
+<ul>
+<li>As described in the other tutorials, you should <strong>pay attention to your training data</strong> having enough variation in terms of <em>angles, lighting, clothing and facial expression</em>. So in case you don’t have enough make some “selfies” looking to the side, up etc. Following the video tutorials suggestions I included mostly pictures of me that were from close enough, around from the waist up. However, what I witness in almost all generated images with the generated “me” being smaller and further away is that the face is messed up. So I wonder if this can improve with more images of me being at a higher distance and will try to re-train. But it could also be that this is a general feature of finetuning at lower resolutions (512x512 pixels) and these pictures need to be refined later anyways.</li>
+<li>Pay attention to your <strong>prompts</strong>, make them as detailed as possible and also use negative prompts. There are many websites that give some inspiration for good prompts (e.g. <a href="https://stable-diffusion-art.com/prompt-guide/">here</a>), and the Automatic1111 extension “Prompt Generator” is very useful to create some more ideas.</li>
+<li>Google Colab in the free version is actually not that powerful. During the training process the T4 GPU always used less than 8GB VRAM, which is also what I would have available locally with my GeForce GTX 4070Ti. So I wonder if the issue was simply the different settings. I downloaded the generated .json-files containing the finetuning parameters, so I will try to test these locally again.</li>
+<li>Play around again and again, also testing different settings. The “X/Y/Z” Script functionality can be a useful tool to test different values for the paramters “CFG Scale”, “Scheduler” or simply different random seeds. It might be a good idea to generate a larger batch of images using one CFG value, then take the seeds of the pictures you like and then create image grids with different values of CFG Scale to further refine.</li>
+<li>There is still so much more to explore! Additional models, like ControlNets are able to fix common issues like misformed faces or hands (with extra fingers), or upscale the images to higher resolutions.</li>
+</ul>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion:</h2>
+<p>My journey into the world of generative AI art has been a rollercoaster of challenges and triumphs. From acquiring a gaming PC on Black Friday to navigating the complexities of Python and software updates, the experience has been both educational and rewarding. Through perseverance and dedication, I’ve not only learned to harness the power of AI for artistic expression but have also witnessed the transformative potential of these open source models and tools. As the realm of generative AI continues to evolve, so too does the canvas of possibilities for creative individuals eager to explore the intersection of technology and art.<br />
+<br />
+<em>Note: this blog post was co-authored by ChatGPT (GPT 3.5 Turbo), so also expect some post in the near future on LLMs! ;-)</em></p>
+</div>
+
+    </div>
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/ai/">AI</a>
+  
+  <a class="badge badge-light" href="/tags/generative-ai/">Generative AI</a>
+  
+  <a class="badge badge-light" href="/tags/open-source/">Open Source</a>
+  
+  <a class="badge badge-light" href="/tags/art/">Art</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu6bb3d8d55dd3e320d2abc8ab1543477e_109104_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="https://alex.melemenidis.de/">Alexandros Melemenidis</a></h5>
+      
+      <p class="card-text" itemprop="description">Make the data work for YOU.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="/#contact" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://scholar.google.co.uk/citations?user=_yGta4AAAAAJ" target="_blank" rel="noopener">
+              <i class="fab fa-google-scholar"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.linkedin.com/in/alexandros-melemenidis-18a6b6183/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.xing.com/profile/Alexandros_Melemenidis" target="_blank" rel="noopener">
+              <i class="fab fa-xing"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/alex-m-ffm" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.youtube.com/channel/UC7p805M43uY6WrJ29v3Fe7g" target="_blank" rel="noopener">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/post/2023-10-15-wildlife-conservation-with-ai/">pro-bono project at Deloitte - Wildlife conservation with AI and Cloud technologies</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academia.min.e4fc229c2f28284fc2dfa5b66a52b765.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        
+        <p class="powered-by">
+          <a href="/privacy/">Privacy Policy</a>
+        </p>
+        
+        <p>
+          Copyright © 2024 &middot; 
+          Powered by
+          <a href="https://gethugothemes.com" target="_blank" rel="noopener">Gethugothemes</a>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <ul class="list-inline network-icon text-right">
+          
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

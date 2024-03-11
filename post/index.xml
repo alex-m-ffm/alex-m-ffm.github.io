@@ -7,10 +7,85 @@
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
-    <lastBuildDate>Sun, 15 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Mar 2024 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://alex.melemenidis.de/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My trial-and-error journey of creating AI art of myself using Open Source models and tools</title>
+      <link>https://alex.melemenidis.de/post/2024-03-11-trial-and-error-journey-of-ai-art/</link>
+      <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://alex.melemenidis.de/post/2024-03-11-trial-and-error-journey-of-ai-art/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;em&gt;Caveat: You need a computer with a graphics card with a GPU and at least 8GB VRAM. If not you can at least profit from the code-based part in Google Colab.&lt;/em&gt;&lt;/p&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Generative AI has taken the world by storm, opening up new realms of creativity and innovation. From chatbots powered by large language models (LLMs) to text-to-image models like Stable Diffusion, the possibilities seem boundless. The allure of AI in the art world has captivated enthusiasts, offering a unique blend of technology and creativity. In this blog post, I’ll share my journey of creating AI art of myself using open source models and tools, such as Stable Diffusion, Dreambooth, and the user-friendly GUI-based tool “Automatic1111.”&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-catalyst-a-black-friday-gaming-pc&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The Catalyst: A Black Friday Gaming PC&lt;/h2&gt;
+&lt;p&gt;Last Black Friday, I decided invest in a &lt;a href=&#34;https://support.hp.com/de-de/product/details/omen-by-hp-25l-gaming-desktop-pc-gt15-1000i/model/2101441844?sku=8R2T0EA&#34;&gt;gaming desktop&lt;/a&gt; equipped with a powerful GPU, initially to improve my video editing workflow (which can already be witnessed in my recent &lt;a href=&#34;https://youtu.be/YXaXeL5XsDE&#34;&gt;Thailand travel video&lt;/a&gt;). But one other reason for the investment was that I also wanted to take the plunge into the world of generative AI and be able to test these powerful models locally.This decision was driven by the desire to explore the creative potential of AI models and algorithms, especially those designed for transforming images and generating unique pieces of digital art.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;learning-the-ropes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Learning the Ropes&lt;/h2&gt;
+&lt;p&gt;Armed with my new gaming laptop, I embarked on a journey of self-discovery through various Udemy courses dedicated to generative AI. In terms of text-to-image models I followed the course &lt;a href=&#34;https://www.udemy.com/course/master-ai-image-generation-using-stable-diffusion/?kw=Master+AI+Image&amp;amp;src=sac&#34;&gt;Master AI image generation using Stable Diffusion&lt;/a&gt; which gave a good overview and had excellent Google Colab notebooks with example implementations.
+The course provided me with a foundational understanding of the tools and techniques involved in using GenAI. At the time, however, I was still busy with work and looking for a new job so that I could not find sufficient time to test these tools on my new PC.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;overcoming-hurdles&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Overcoming Hurdles&lt;/h2&gt;
+&lt;p&gt;When I came back to the topic, I wanted to play with image generation models using a graphical user interface (GUI) tool rather than code, since creating these images involves a lot of trial and error and changing settings and that works much better using GUI-based tools with buttons and sliders than adjusting code snippets all the time. On YouTube I stumbled over discussions on &lt;a href=&#34;https://github.com/AUTOMATIC1111/stable-diffusion-webui&#34;&gt;Automatic1111&lt;/a&gt; and how to also use Dreambooth to finetune an existing model on new images.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/3cvP7yJotUM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/9Nu5tUl2zQw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+The initial stages of my exploration were not without their share of hurdles. Wrestling with Python dependencies and configuring the right settings proved to be a daunting task. It took me a while to get things running, in particular installing the &lt;code&gt;xformers&lt;/code&gt; package and needed a few trips through Google &amp;amp; StackOverflow to get it to work (and unfortunately have forgotten by now what was the trick 😅), but finally succeeded.&lt;/p&gt;
+&lt;p&gt;Then I checked out some popular video tutorials by &lt;a href=&#34;https://www.youtube.com/@OlivioSarikas&#34;&gt;Olivio Sarikas&lt;/a&gt; and &lt;a href=&#34;https://www.youtube.com/@SECourses&#34;&gt;Dr. Furkan Gözükara&lt;/a&gt;, which helped explaining the menus and settings and the general process to use the Dreambooth extension.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Bdl-jWR3Ukc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+However, since the videos were produced, Automatic1111 was updated, with changes to the menus and often also to the default options for many settings, making it more difficult to reproduce the results shown in the videos. While I managed to create some interesting pictures using the text-to-image functionality of the models, I was not really able to fine-tune a model to my face, either because the results looked bad or because the process would simply take too long on my system with only 8GB available with my GPU.&lt;br /&gt;
+So only recently I took another go at it and remembered that refining with Dreambooth was also featured in the Udemy course I did last year, and revisited the Google Colab notebook to re-run it with my own training data.&lt;br /&gt;
+Have a look into &lt;a href=&#34;https://colab.research.google.com/drive/1jeuzMNWOHys_ciWzOj78daTBmJuqkxAO?usp=sharing&#34;&gt;&lt;strong&gt;my adjusted copy of that notebook&lt;/strong&gt;&lt;/a&gt;. There you can fine-tune the StableDiffusion 1.5 model (or any other model available on &lt;a href=&#34;https://huggingface.co/models?pipeline_tag=text-to-image&amp;amp;sort=trending&#34;&gt;HuggingFace&lt;/a&gt;) with your own data. Then you can also copy the created model checkpoint into your Google Drive to later download it to your local machine and use it in Automatic1111.&lt;br /&gt;
+One additional step is needed before using the downloaded model locally, which is converting the .ckpt file into a .safetensors file, otherwise Automatic1111 will throw an error, at least it did for me. I used the tool &lt;a href=&#34;https://github.com/diStyApps/Safe-and-Stable-Ckpt2Safetensors-Conversion-Tool-GUI&#34;&gt;tool&lt;/a&gt; to perform the conversion.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-breakthrough-creating-impressive-ai-art&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The Breakthrough: Creating Impressive AI Art&lt;/h2&gt;
+&lt;p&gt;After navigating the intricacies of generative AI, I finally achieved a breakthrough, producing impressive AI art of myself using Stable Diffusion, Dreambooth, and the intuitive GUI-based tool “Automatic1111.” The amalgamation of these open source models and tools allowed me to transcend traditional boundaries and explore the endless possibilities of self-expression through artificial intelligence.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;00011-2157247297.png&#34; style=&#34;width:40.0%&#34; alt=&#34;Prompt: illustration of ohwx man, like obama yes we can poster, realistic, blue and red&#34; /&gt; &lt;img src=&#34;00017-4088469429.png&#34; style=&#34;width:40.0%&#34; alt=&#34;Prompt: (ohwx man) as the simpsons character, glasses&#34; /&gt; 
+&lt;img src=&#34;00031-4033097712.png&#34; style=&#34;width:40.0%&#34; alt=&#34;Prompt: 2x2 grid of portraits of (ohwx man), popart by Andy Warhol&#34; /&gt; &lt;img src=&#34;00030-1322871741.png&#34; style=&#34;width:40.0%&#34; alt=&#34;(ohwx man) as muppet show character&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Learnings so far:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;As described in the other tutorials, you should &lt;strong&gt;pay attention to your training data&lt;/strong&gt; having enough variation in terms of &lt;em&gt;angles, lighting, clothing and facial expression&lt;/em&gt;. So in case you don’t have enough make some “selfies” looking to the side, up etc. Following the video tutorials suggestions I included mostly pictures of me that were from close enough, around from the waist up. However, what I witness in almost all generated images with the generated “me” being smaller and further away is that the face is messed up. So I wonder if this can improve with more images of me being at a higher distance and will try to re-train. But it could also be that this is a general feature of finetuning at lower resolutions (512x512 pixels) and these pictures need to be refined later anyways.&lt;/li&gt;
+&lt;li&gt;Pay attention to your &lt;strong&gt;prompts&lt;/strong&gt;, make them as detailed as possible and also use negative prompts. There are many websites that give some inspiration for good prompts (e.g. &lt;a href=&#34;https://stable-diffusion-art.com/prompt-guide/&#34;&gt;here&lt;/a&gt;), and the Automatic1111 extension “Prompt Generator” is very useful to create some more ideas.&lt;/li&gt;
+&lt;li&gt;Google Colab in the free version is actually not that powerful. During the training process the T4 GPU always used less than 8GB VRAM, which is also what I would have available locally with my GeForce GTX 4070Ti. So I wonder if the issue was simply the different settings. I downloaded the generated .json-files containing the finetuning parameters, so I will try to test these locally again.&lt;/li&gt;
+&lt;li&gt;Play around again and again, also testing different settings. The “X/Y/Z” Script functionality can be a useful tool to test different values for the paramters “CFG Scale”, “Scheduler” or simply different random seeds. It might be a good idea to generate a larger batch of images using one CFG value, then take the seeds of the pictures you like and then create image grids with different values of CFG Scale to further refine.&lt;/li&gt;
+&lt;li&gt;There is still so much more to explore! Additional models, like ControlNets are able to fix common issues like misformed faces or hands (with extra fingers), or upscale the images to higher resolutions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusion&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Conclusion:&lt;/h2&gt;
+&lt;p&gt;My journey into the world of generative AI art has been a rollercoaster of challenges and triumphs. From acquiring a gaming PC on Black Friday to navigating the complexities of Python and software updates, the experience has been both educational and rewarding. Through perseverance and dedication, I’ve not only learned to harness the power of AI for artistic expression but have also witnessed the transformative potential of these open source models and tools. As the realm of generative AI continues to evolve, so too does the canvas of possibilities for creative individuals eager to explore the intersection of technology and art.&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;Note: this blog post was co-authored by ChatGPT (GPT 3.5 Turbo), so also expect some post in the near future on LLMs! ;-)&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>pro-bono project at Deloitte - Wildlife conservation with AI and Cloud technologies</title>
