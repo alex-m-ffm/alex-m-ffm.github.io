@@ -451,7 +451,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    6 min read
+    7 min read
   </span>
   
 
@@ -590,7 +590,7 @@
 </div>
 <div id="learning-the-ropes" class="section level2">
 <h2>Learning the Ropes</h2>
-<p>Armed with my new gaming laptop, I embarked on a journey of self-discovery through various Udemy courses dedicated to generative AI. In terms of text-to-image models I followed the course <a href="https://www.udemy.com/course/master-ai-image-generation-using-stable-diffusion/?kw=Master+AI+Image&amp;src=sac">Master AI image generation using Stable Diffusion</a> which gave a good overview and had excellent Google Colab notebooks with example implementations.
+<p>Armed with my new gaming desktop, I embarked on a journey of self-discovery through various Udemy courses dedicated to generative AI. In terms of text-to-image models I followed the course <a href="https://www.udemy.com/course/master-ai-image-generation-using-stable-diffusion/?kw=Master+AI+Image&amp;src=sac">Master AI image generation using Stable Diffusion</a> which gave a good overview and had excellent Google Colab notebooks with example implementations.
 The course provided me with a foundational understanding of the tools and techniques involved in using GenAI. At the time, however, I was still busy with work and looking for a new job so that I could not find sufficient time to test these tools on my new PC.</p>
 </div>
 <div id="overcoming-hurdles" class="section level2">
@@ -619,8 +619,8 @@ The initial stages of my exploration were not without their share of hurdles. Wr
 <p><br />
 However, since the videos were produced, Automatic1111 was updated, with changes to the menus and often also to the default options for many settings, making it more difficult to reproduce the results shown in the videos. While I managed to create some interesting pictures using the text-to-image functionality of the models, I was not really able to fine-tune a model to my face, either because the results looked bad or because the process would simply take too long on my system with only 8GB available with my GPU.<br />
 So only recently I took another go at it and remembered that refining with Dreambooth was also featured in the Udemy course I did last year, and revisited the Google Colab notebook to re-run it with my own training data.<br />
-Have a look into <a href="https://colab.research.google.com/drive/1jeuzMNWOHys_ciWzOj78daTBmJuqkxAO?usp=sharing"><strong>my adjusted copy of that notebook</strong></a>. There you can fine-tune the StableDiffusion 1.5 model (or any other model available on <a href="https://huggingface.co/models?pipeline_tag=text-to-image&amp;sort=trending">HuggingFace</a>) with your own data. Then you can also copy the created model checkpoint into your Google Drive to later download it to your local machine and use it in Automatic1111.<br />
-One additional step is needed before using the downloaded model locally, which is converting the .ckpt file into a .safetensors file, otherwise Automatic1111 will throw an error, at least it did for me. I used the tool <a href="https://github.com/diStyApps/Safe-and-Stable-Ckpt2Safetensors-Conversion-Tool-GUI">tool</a> to perform the conversion.</p>
+Have a look into <a href="https://colab.research.google.com/drive/1jeuzMNWOHys_ciWzOj78daTBmJuqkxAO?usp=sharing"><strong>my adjusted copy of that notebook</strong></a>. There you can fine-tune the StableDiffusion 1.5 model (or any other model available on <a href="https://huggingface.co/models?pipeline_tag=text-to-image&amp;sort=trending">HuggingFace</a>) with your own data. To bring your images in the right format you can use the web tool <a href="https://www.birme.net/?target_width=512&amp;target_height=512">BIRME</a>, which can resize your images in bulk and already select a good focal point (where the image format is not already square). Then you can also copy the created model checkpoint into your Google Drive to later download it to your local machine and use it in Automatic1111.<br />
+One additional step is needed before using the downloaded model locally, which is converting the .ckpt file into a .safetensors file, otherwise Automatic1111 will throw an error, at least it did for me. I used the <a href="https://github.com/diStyApps/Safe-and-Stable-Ckpt2Safetensors-Conversion-Tool-GUI">Ckpt2Safetensors Conversion Tool</a> to perform the conversion.</p>
 </div>
 <div id="the-breakthrough-creating-impressive-ai-art" class="section level2">
 <h2>The Breakthrough: Creating Impressive AI Art</h2>
