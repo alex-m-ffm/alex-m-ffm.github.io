@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academia 4.3.1">
+  <meta name="generator" content="Hugo 0.79.1" />
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Alexandros Melemenidis">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="In this blog post I analyse data from the Youtube API on my channel and the competition to find out how to give my content the attention it needs.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://alex.melemenidis.de/post/2024-03-19-why-i-am-not-viral/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#fc6f5c">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academia.min.bb5ab09ea511c063bce928c9c03b5ec3.css">
+
+  
+
+  
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://alex.melemenidis.de/post/2024-03-19-why-i-am-not-viral/">
+
+  
+  
+  
+  
+    
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Alex Melemenidis&#39;s homepage">
+  <meta property="og:url" content="https://alex.melemenidis.de/post/2024-03-19-why-i-am-not-viral/">
+  <meta property="og:title" content="Why I am not viral on Youtube - A Data Analysis | Alex Melemenidis&#39;s homepage">
+  <meta property="og:description" content="In this blog post I analyse data from the Youtube API on my channel and the competition to find out how to give my content the attention it needs."><meta property="og:image" content="https://alex.melemenidis.de/post/2024-03-19-why-i-am-not-viral/featured.jpg">
+  <meta property="twitter:image" content="https://alex.melemenidis.de/post/2024-03-19-why-i-am-not-viral/featured.jpg"><meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2024-03-19T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2024-03-19T10:00:00&#43;02:00">
+  
+
+  
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#fc6f5c",
+          "text": "#fff"
+        },
+        "button": {
+          "background": "#fff",
+          "text": "#fc6f5c"
+        }
+      },
+      "theme": "classic",
+      "content": {
+        "message": "This website uses cookies to ensure you get the best experience on our website.",
+        "dismiss": "Got it!",
+        "link": "Learn more",
+        "href": "/privacy/"
+      }
+    })});
+</script>
+
+
+
+  
+
+
+
+
+
+  <title>Why I am not viral on Youtube - A Data Analysis | Alex Melemenidis&#39;s homepage</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Alex Melemenidis&#39;s homepage</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article py-5" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container split-header">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+        <img class="img-fluid w-100" src="/post/2024-03-19-why-i-am-not-viral/featured_hu6e9bed5cc0093f1e4ff4ebe1b523256f_39363_680x500_fill_q90_lanczos_smart1.jpg" itemprop="image" alt="">
+        <span
+          class="article-header-caption">' Photo by <!-- raw HTML omitted -->charlesdeluvio<!-- raw HTML omitted --> on <!-- raw HTML omitted -->Unsplash<!-- raw HTML omitted --> '</span>
+    </div>
+    <div class="col-lg-8">
+      <h1 itemprop="name">Why I am not viral on Youtube - A Data Analysis</h1>
+
+      
+
+      
+
+
+
+<meta content="2024-03-19 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2024-03-19 10:00:00 &#43;0200 &#43;0200" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/admin/">Alexandros Melemenidis</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    <time>Mar 19, 2024</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://alex.melemenidis.de/post/2024-03-19-why-i-am-not-viral/&amp;text=Why%20I%20am%20not%20viral%20on%20Youtube%20-%20A%20Data%20Analysis" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://alex.melemenidis.de/post/2024-03-19-why-i-am-not-viral/&amp;t=Why%20I%20am%20not%20viral%20on%20Youtube%20-%20A%20Data%20Analysis" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Why%20I%20am%20not%20viral%20on%20Youtube%20-%20A%20Data%20Analysis&amp;body=https://alex.melemenidis.de/post/2024-03-19-why-i-am-not-viral/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://alex.melemenidis.de/post/2024-03-19-why-i-am-not-viral/&amp;title=Why%20I%20am%20not%20viral%20on%20Youtube%20-%20A%20Data%20Analysis" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Why%20I%20am%20not%20viral%20on%20Youtube%20-%20A%20Data%20Analysis%20https://alex.melemenidis.de/post/2024-03-19-why-i-am-not-viral/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://alex.melemenidis.de/post/2024-03-19-why-i-am-not-viral/&amp;title=Why%20I%20am%20not%20viral%20on%20Youtube%20-%20A%20Data%20Analysis" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+    </div>
+  </div>
+</div>
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+
+<p><em>Find the code for my analysis on my <a href="https://github.com/alex-m-ffm/Youtube_Analysis">Github repo</a></em></p>
+<div id="introduction" class="section level2">
+<h2>Introduction:</h2>
+<p>As a passionate amateur dragonboat paddler and video editor, I have over the years created more and more videos (currently 61 published) to show the world the competitions and travels of my awesome team.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/4UYevtuy5Dg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p><br />
+Yet, this improvement in quality did not translate into the traffic I was hoping for, so I concluded the YouTube algorithm is not promoting my content to users enough. I decided to investigate this and use my Data Science skills to solve the problem. In this blog post, I’ll share insights from my analysis and explore how YouTube’s algorithm impacts the visibility and success of dragonboat channels.</p>
+<hr />
+</div>
+<div id="exploring-channel-data" class="section level2">
+<h2>Exploring Channel Data:</h2>
+<p>I started my analysis by going through the rabbit hole of searching for dragonboat content on videos, subscribing to channels, browsing my feed and repeating. In the end I collected 66 channels fully dedicated to the topic of dragonboat or even belonging to a specific team, and 29 channels which contained not just videos on paddling, but also other videos, similar to my channel. As far as country information for the channels was available, I gathered channels from around the world, with at least 11 from the US and Canada, 4 from Australia and New Zealand, at least 8 from South-East Asia (Taiwan, Philippines, Singapore, Indonesia) and at least 5 from Europe.<br />
+Using Python, I collected data on these channels as a starting point for further analysis on the contained videos (as for this we need the playlist ID for the channel uploads), but also to get aggregate view and subscriber counts, information on whether the channels have a channel trailer for unsubscribed visitors and how YouTube has categorised them.<br />
+Looking simply at aggregate view counts and the ratio of view count per video (to control for the fact that some channels are older than others), does not reveal that solely dragonboat-focussed channels generated more views than the channels with mixed content. There are channels of both types which have generated more than 100,000 views and on average more than 1,000 views per video, clearly outperforming my channel (at 21K views, i.e. 350 per video).<br />
+</p>
+<p><img src="views_by_channel_type_scatter.png" alt="Figure 1 - aggregate views and views per video - log scale" /><br />
+In terms of subscriber counts, three channels have surpassed and other three are close to the mark of 1,000 subscribers, which is one of the requirements for joining the YouTube partner program which allows you to generate ad revenue.<br />
+</p>
+<hr />
+</div>
+<div id="the-impact-of-channel-categorization" class="section level2">
+<h2>The Impact of Channel Categorization:</h2>
+<p>Then, I decided to dig deeper into the issue of topic categories. In the analysis above I made the decision to group channels into ‘dragonboat’ and ‘mixed content’, but (how) does the YouTube algorithm categorize them?
+Checking the frequencies of categories within the first three topic category lists of the channels reveals that most ‘mixed content’ channels in my sample are categorized similarly to the pure ‘dragonboat’ channels, having as first category ‘Sports’, as second category ‘Lifestyle’ and as third category - if available - ‘Vehicle’ (for boat).<br />
+</p>
+<p><img src="topic_categories_db.png" alt="Figure 2 - Topic categories for dragonboat channels" /><br />
+<img src="topic_categories_mixed.png" alt="Figure 3 - Topic categories for mixed content channels" /><br />
+</p>
+<p>By contrast, the topic categories returned for <a href="https://www.youtube.com/@AlexMelemenidis">my channel</a> are:</p>
+<ol style="list-style-type: decimal">
+<li>Hobby</li>
+<li>Sport</li>
+<li>Tourism</li>
+<li>Lifestyle</li>
+</ol>
+<p>So it seems that I am more mixed than these mixed channels. On my channel I also feature travel videos and some pure aerial content drone videos, which appears to confuse the algorithm when deciding which content to show on a user’s feed.</p>
+<p>Professional YouTuber also advise to have <strong>consistent content</strong> in one channel. Besides the categorization, the YouTube algorithm also promotes the content of channel based on its <strong>previous success</strong> in terms of the count of viewers and subscribers, how many users click on impressions of a video in their feed (the so-called ‘click-through-rate’) and how long the viewers are actually watching the video (‘retention’).
+While I personally like <a href="https://www.youtube.com/playlist?list=PLpW2X6ap8IsVrZQt3HgyLb89igcNMOxit">paddling</a>, <a href="https://www.youtube.com/playlist?list=PLpW2X6ap8IsUq_5SPBWske4rQgJsC3A1X">surfing</a>, <a href="https://www.youtube.com/playlist?list=PLpW2X6ap8IsXzPVj5rfYpwAJDdkImVqGd">skiing</a>, <a href="https://www.youtube.com/playlist?list=PLpW2X6ap8IsV4s9P7-EXgnCMmQLG0GakE">travelling</a>, <a href="https://www.youtube.com/playlist?list=PLpW2X6ap8IsUITs2rTHvWMl_jmNlbMpz6">obstacle course racing</a>, hiking and <a href="https://www.youtube.com/playlist?list=PLpW2X6ap8IsVINEBJPJrKqgFQ_GYhpVmt">flying drones</a>, other people may not necessarily like <strong>all of these activities together</strong>. So someone who has seen and liked my ski-trip videos will be shown my dragonboat videos in their feed, but will not be interested and thus reduce my click-through rate, or click and then stop the video after a few seconds, hurting my retention rate.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/ow2gIOxZCN0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p><br />
+Besides the topic categories, I looked into another component of channels: some channels greet unsubscribed new viewers on their channel page with a channel trailer that introduces what the channel is about and raises a call to action to subscribe. As in the public data API I cannot retrieve historical information, I can only check if there is a correlation between the existence of a trailer and the subscriber count. So it might be that as channels have gained more subscribers, they later took the time to add a channel trailer, rather than the trailer nudging more users to click subscribe, but the correlation nonetheless looks quite strong. So it might be a good idea for me to add a channel trailer, as currently I don’t have one.</p>
+<p><img src="channel_trailer_boxplot.png" alt="Figure 4 - Distribution of subscriber count by whether there is a channel trailer" /><br />
+</p>
+<hr />
+</div>
+<div id="insights-from-video-data" class="section level2">
+<h2>Insights from Video Data:</h2>
+<p>Further investigation into individual videos uncovered valuable insights. Both groups of channels contained around 10,000 videos, on which I could retrieve useful statistics on views, likes, shares, as well as information on their descriptions, or the duration of the video.
+Looking at individual videos, it seems that videos from dragonboat channels somewhat outperform those from mixed-content channels in terms of views and likes.
+<img src="videos_likes_vs_views_scatter.png" alt="Figure 5 - View count vs Like count by channel type - Log scale" />
+Additionally, the presence of hashtags and descriptive content in video descriptions positively correlated with view counts, indicating their importance in attracting viewership. Since the YouTube algorithms has been changed over the years and the use of hashtags is also quite recent, I restricted that analysis to only videos published since 2022. In both cases the inter-quartile range of the video views ranges much higher if the video has a description and higher if the description contains hashtags for search.</p>
+<p><img src="hashtags_boxplot.png" alt="Figure 6 - Distribution of video view count by whether the description contains hashtags" />
+<img src="non_empty_description_boxplot.png" alt="Figure 7 - Distribution of video view count by whether the description contains any text" /></p>
+<p>Lastly, I analyzed whether viewers of dragonboat videos prefer videos of a certain duration, as mine are often on the longer side, especially for those showing international trips with some travel content at the beginning.</p>
+<p>For both views and likes there does not appear to be any siginficant correlation with the duration of the video, but all in all there is a sweet spot in which most of the videos simply are, with the middle 50% of videos being in the range of one to three minutes long.</p>
+<p><img src="videos_views_vs_duration_scatter.png" alt="Figure 8 - View count vs. duration (seconds) by channel type - log scale" /><br />
+<img src="videos_likes_vs_duration_scatter.png" alt="Figure 9 - Like count vs. duration (seconds) by channel type - log scale" /><br />
+</p>
+<hr />
+</div>
+<div id="monitoring-my-own-channel-using-the-youtube-analytics-api" class="section level2">
+<h2>Monitoring my own channel using the YouTube Analytics API:</h2>
+<p>Already some months ago I started becoming more interested in the issue and asked ChatGPT to improve my video descriptions in terms of search engine optimization (SEO). For some videos that did not yet have custom thumbnails I also added them. These changes occurred around the 18th of February 2024 so I wanted to check on the YouTube Analytics API whether this had an effect. Unfortunately the metric of ‘Annotation Impressions’ - the presentation of a clickable thumbnail to a video in a user’s feed, which is visible without a problem in the YouTube Studio App, cannot be retrieved via the API. In terms of overall views for these older videos with improved descriptions and thumbnails the effect appears still marginal, but I will keep an eye on the developments.</p>
+<p><img src="analytics_adjustment_seo.png" alt="Figure 10 - View Count over time for videos with adjusted metadata" /><br />
+</p>
+<p>Annotation impressions for all my videos did increase when I made the changes in titles, descriptions and thumbnails (third spike), but this could still have been boosted by the prior publication of two other videos (previous two spikes).</p>
+<div class="float">
+<img src="Screenshot_YT_Studio.jpg" alt="Figure 11 - Aggregate annotation impressions" />
+<div class="figcaption">Figure 11 - Aggregate annotation impressions</div>
+</div>
+<hr />
+</div>
+<div id="my-learnings" class="section level2">
+<h2>My learnings:</h2>
+<p>In conclusion, my analysis offers valuable insights into the complexities of YouTube’s algorithm and its impact on content visibility.
+Moving forward, I aim to leverage these insights to refine my content strategy and enhance the overall viewing experience for dragonboat enthusiasts worldwide.<br />
+</p>
+<ul>
+<li>Most importantly this means that I will publish new content on <strong>dedicated channels</strong> aligning with the YouTube topic categories. For this I have already created a new dragonboat channel for my team <a href="https://www.youtube.com/@FFM-Mixup-DB">Frankforter Dorschenanner</a> ✅. So far I will keep the existing videos on the old channel, as the migration of videos will reset the views and likes and I am not yet willing to do that.</li>
+<li>I will try to shoot a little channel trailer 🎥 and make sure descriptions and titles are search-optimized and thumbnails exciting enough to make people click!</li>
+<li>In particular for typical dragonboat regattas with multiple races, I will create separate ‘raw’ videos for each race, as this aligns better with the length viewers are used to rather than one longer video with chapters. Also, this strategy helps my statistics for becoming a YouTube partner, as one should publish at least three videos in the last 90 days.<br />
+</li>
+</ul>
+<p>Let’s make 2024 viral! 🤩</p>
+</div>
+
+    </div>
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/youtube/">YouTube</a>
+  
+  <a class="badge badge-light" href="/tags/video-editing/">Video Editing</a>
+  
+  <a class="badge badge-light" href="/tags/api/">API</a>
+  
+  <a class="badge badge-light" href="/tags/data-science/">Data Science</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu6bb3d8d55dd3e320d2abc8ab1543477e_109104_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="https://alex.melemenidis.de/">Alexandros Melemenidis</a></h5>
+      
+      <p class="card-text" itemprop="description">Make the data work for YOU.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="/#contact" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://scholar.google.co.uk/citations?user=_yGta4AAAAAJ" target="_blank" rel="noopener">
+              <i class="fab fa-google-scholar"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.linkedin.com/in/alexandros-melemenidis-18a6b6183/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.xing.com/profile/Alexandros_Melemenidis" target="_blank" rel="noopener">
+              <i class="fab fa-xing"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/alex-m-ffm" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.youtube.com/channel/UC7p805M43uY6WrJ29v3Fe7g" target="_blank" rel="noopener">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/post/2021-01-10-lockdown-productivity/">Lockdown productivity</a></li>
+          
+          <li><a href="/project/bee-observer/">Bee Observer</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academia.min.e4fc229c2f28284fc2dfa5b66a52b765.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        
+        <p class="powered-by">
+          <a href="/privacy/">Privacy Policy</a>
+        </p>
+        
+        <p>
+          Copyright © 2024 &middot; 
+          Powered by
+          <a href="https://gethugothemes.com" target="_blank" rel="noopener">Gethugothemes</a>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <ul class="list-inline network-icon text-right">
+          
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

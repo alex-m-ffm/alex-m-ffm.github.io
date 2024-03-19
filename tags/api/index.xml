@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data Science on Alex Melemenidis&#39;s homepage</title>
-    <link>https://alex.melemenidis.de/tags/data-science/</link>
-    <description>Recent content in Data Science on Alex Melemenidis&#39;s homepage</description>
+    <title>API on Alex Melemenidis&#39;s homepage</title>
+    <link>https://alex.melemenidis.de/tags/api/</link>
+    <description>Recent content in API on Alex Melemenidis&#39;s homepage</description>
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
     <lastBuildDate>Tue, 19 Mar 2024 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://alex.melemenidis.de/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://alex.melemenidis.de/tags/api/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -114,63 +114,6 @@ Moving forward, I aim to leverage these insights to refine my content strategy a
 &lt;/ul&gt;
 &lt;p&gt;Let’s make 2024 viral! 🤩&lt;/p&gt;
 &lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Lockdown productivity</title>
-      <link>https://alex.melemenidis.de/post/2021-01-10-lockdown-productivity/</link>
-      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://alex.melemenidis.de/post/2021-01-10-lockdown-productivity/</guid>
-      <description>
-
-
-&lt;p&gt;Happy New Year everyone!&lt;/p&gt;
-&lt;p&gt;The last holiday period under Covid-19 restrictions was certainly different than in other, normal years. On the one hand I had more time available, as I consumed unused leave days before they would expire, but at the same time I could not meet my old hometown friends as often as I wanted or go to the fantastic christmas market of Braunschweig, which is normally a highlight of the holidays. So I restricted myself to one outside meetup with my friends for a walk in the park, otherwise played UNO or Yahtzee with my parents, my brother and his girlfriend and otherwise spent my time digitally to stay productive and creative.&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;I learned to use &lt;code&gt;blogdown&lt;/code&gt; to build this very personal homepage from the awesome &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;book by Yihui Xie&lt;/a&gt;.&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;I freshened up my knowledge of &lt;code&gt;shiny&lt;/code&gt;, as this might come in handy at work soon. The book &lt;a href=&#34;https://mastering-shiny.org/index.html&#34;&gt;Mastering Shiny&lt;/a&gt; by Hadley Wickkham, while still in development, is now much more advanced than the first time I looked into it for a project during my MSc program in late 2019. With my new knowledge on Git I even made a &lt;a href=&#34;https://github.com/hadley/mastering-shiny/pull/350&#34;&gt;pull request&lt;/a&gt; to contribute to the book (albeit only a small fix)!&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;I finally managed to finish editing a video of a canoeing weekend in August (see below). The trip was a way for our dragonboat group to keep paddling on a weekend that would otherwise be spent on the river Main competing in the Frankfurt Museumsuferfest. Hopefully the vaccinations go ahead fast so that we can return to normality by end of August 2021!&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;With 2021 it seems we will have new legislation on drones, which may require getting a license. Since this is currently possible for free at the &lt;a href=&#34;https://lba-openuav.de/&#34;&gt;Luftfahrtbundesamt&lt;/a&gt;, I also did the online training for the A1/A3 open sub category. New travels and amazing travel videos to come soon!&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Since Monday I am back in the (home) office, but the lockdown will continue until at least the end of the month. So more (forced) time for getting things done!&lt;/p&gt;
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/cguG88gxmrs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-</description>
-    </item>
-    
-    <item>
-      <title>Bee Observer</title>
-      <link>https://alex.melemenidis.de/project/bee-observer/</link>
-      <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://alex.melemenidis.de/project/bee-observer/</guid>
-      <description>&lt;p&gt;Through my MeetUp newsletter I randomly stumbled upon the Rhein-Main local chapter of &lt;a href=&#34;https://correlaid.org/&#34;&gt;Correlaid&lt;/a&gt;, a non-profit organisation that is supporting other NPOs in data science and digital projects.
-For my thesis project I joined the on-going collaboration with the University of Bremen on the project &lt;a href=&#34;http://www.cognitive-neuroinformatics.com/de/forschung/projekte/sensorbeuten&#34;&gt;Bee Observer (BOB)&lt;/a&gt;. Through sensors in beehives this project aims at helping beekeepers in their regular activities and create a large dataset for bee research.&lt;/p&gt;
-&lt;p&gt;Read the thesis &lt;a href=&#34;https://alex-m-ffm.github.io/bob-thesis/&#34;&gt;HERE&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Talking to data scientists about bees</title>
-      <link>https://alex.melemenidis.de/talk/bob-correlcon/</link>
-      <pubDate>Sat, 07 Nov 2020 13:00:00 +0000</pubDate>
-      
-      <guid>https://alex.melemenidis.de/talk/bob-correlcon/</guid>
-      <description>&lt;p&gt;During our first talk on CorrelCon 2020, my project teammates Diren Senger (University of Bremen), Alexander Goncharskiy and I (both Correlaid x Rhein-Main) presented our work in the Bee  Observer project, along with the general topic of bees and what Citizen Science means.
-Watch the recording of the talk to get a flavour.&lt;/p&gt;
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/POqqK7Qj4cU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
 </description>
     </item>
     

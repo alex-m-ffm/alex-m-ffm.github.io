@@ -7,10 +7,115 @@
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
-    <lastBuildDate>Sun, 10 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Mar 2024 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://alex.melemenidis.de/tags/video-editing/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Why I am not viral on Youtube - A Data Analysis</title>
+      <link>https://alex.melemenidis.de/post/2024-03-19-why-i-am-not-viral/</link>
+      <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://alex.melemenidis.de/post/2024-03-19-why-i-am-not-viral/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;em&gt;Find the code for my analysis on my &lt;a href=&#34;https://github.com/alex-m-ffm/Youtube_Analysis&#34;&gt;Github repo&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction:&lt;/h2&gt;
+&lt;p&gt;As a passionate amateur dragonboat paddler and video editor, I have over the years created more and more videos (currently 61 published) to show the world the competitions and travels of my awesome team.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/4UYevtuy5Dg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Yet, this improvement in quality did not translate into the traffic I was hoping for, so I concluded the YouTube algorithm is not promoting my content to users enough. I decided to investigate this and use my Data Science skills to solve the problem. In this blog post, I’ll share insights from my analysis and explore how YouTube’s algorithm impacts the visibility and success of dragonboat channels.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exploring-channel-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exploring Channel Data:&lt;/h2&gt;
+&lt;p&gt;I started my analysis by going through the rabbit hole of searching for dragonboat content on videos, subscribing to channels, browsing my feed and repeating. In the end I collected 66 channels fully dedicated to the topic of dragonboat or even belonging to a specific team, and 29 channels which contained not just videos on paddling, but also other videos, similar to my channel. As far as country information for the channels was available, I gathered channels from around the world, with at least 11 from the US and Canada, 4 from Australia and New Zealand, at least 8 from South-East Asia (Taiwan, Philippines, Singapore, Indonesia) and at least 5 from Europe.&lt;br /&gt;
+Using Python, I collected data on these channels as a starting point for further analysis on the contained videos (as for this we need the playlist ID for the channel uploads), but also to get aggregate view and subscriber counts, information on whether the channels have a channel trailer for unsubscribed visitors and how YouTube has categorised them.&lt;br /&gt;
+Looking simply at aggregate view counts and the ratio of view count per video (to control for the fact that some channels are older than others), does not reveal that solely dragonboat-focussed channels generated more views than the channels with mixed content. There are channels of both types which have generated more than 100,000 views and on average more than 1,000 views per video, clearly outperforming my channel (at 21K views, i.e. 350 per video).&lt;br /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;views_by_channel_type_scatter.png&#34; alt=&#34;Figure 1 - aggregate views and views per video - log scale&#34; /&gt;&lt;br /&gt;
+In terms of subscriber counts, three channels have surpassed and other three are close to the mark of 1,000 subscribers, which is one of the requirements for joining the YouTube partner program which allows you to generate ad revenue.&lt;br /&gt;
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-impact-of-channel-categorization&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The Impact of Channel Categorization:&lt;/h2&gt;
+&lt;p&gt;Then, I decided to dig deeper into the issue of topic categories. In the analysis above I made the decision to group channels into ‘dragonboat’ and ‘mixed content’, but (how) does the YouTube algorithm categorize them?
+Checking the frequencies of categories within the first three topic category lists of the channels reveals that most ‘mixed content’ channels in my sample are categorized similarly to the pure ‘dragonboat’ channels, having as first category ‘Sports’, as second category ‘Lifestyle’ and as third category - if available - ‘Vehicle’ (for boat).&lt;br /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;topic_categories_db.png&#34; alt=&#34;Figure 2 - Topic categories for dragonboat channels&#34; /&gt;&lt;br /&gt;
+&lt;img src=&#34;topic_categories_mixed.png&#34; alt=&#34;Figure 3 - Topic categories for mixed content channels&#34; /&gt;&lt;br /&gt;
+&lt;/p&gt;
+&lt;p&gt;By contrast, the topic categories returned for &lt;a href=&#34;https://www.youtube.com/@AlexMelemenidis&#34;&gt;my channel&lt;/a&gt; are:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Hobby&lt;/li&gt;
+&lt;li&gt;Sport&lt;/li&gt;
+&lt;li&gt;Tourism&lt;/li&gt;
+&lt;li&gt;Lifestyle&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;So it seems that I am more mixed than these mixed channels. On my channel I also feature travel videos and some pure aerial content drone videos, which appears to confuse the algorithm when deciding which content to show on a user’s feed.&lt;/p&gt;
+&lt;p&gt;Professional YouTuber also advise to have &lt;strong&gt;consistent content&lt;/strong&gt; in one channel. Besides the categorization, the YouTube algorithm also promotes the content of channel based on its &lt;strong&gt;previous success&lt;/strong&gt; in terms of the count of viewers and subscribers, how many users click on impressions of a video in their feed (the so-called ‘click-through-rate’) and how long the viewers are actually watching the video (‘retention’).
+While I personally like &lt;a href=&#34;https://www.youtube.com/playlist?list=PLpW2X6ap8IsVrZQt3HgyLb89igcNMOxit&#34;&gt;paddling&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/playlist?list=PLpW2X6ap8IsUq_5SPBWske4rQgJsC3A1X&#34;&gt;surfing&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/playlist?list=PLpW2X6ap8IsXzPVj5rfYpwAJDdkImVqGd&#34;&gt;skiing&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/playlist?list=PLpW2X6ap8IsV4s9P7-EXgnCMmQLG0GakE&#34;&gt;travelling&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/playlist?list=PLpW2X6ap8IsUITs2rTHvWMl_jmNlbMpz6&#34;&gt;obstacle course racing&lt;/a&gt;, hiking and &lt;a href=&#34;https://www.youtube.com/playlist?list=PLpW2X6ap8IsVINEBJPJrKqgFQ_GYhpVmt&#34;&gt;flying drones&lt;/a&gt;, other people may not necessarily like &lt;strong&gt;all of these activities together&lt;/strong&gt;. So someone who has seen and liked my ski-trip videos will be shown my dragonboat videos in their feed, but will not be interested and thus reduce my click-through rate, or click and then stop the video after a few seconds, hurting my retention rate.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/ow2gIOxZCN0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Besides the topic categories, I looked into another component of channels: some channels greet unsubscribed new viewers on their channel page with a channel trailer that introduces what the channel is about and raises a call to action to subscribe. As in the public data API I cannot retrieve historical information, I can only check if there is a correlation between the existence of a trailer and the subscriber count. So it might be that as channels have gained more subscribers, they later took the time to add a channel trailer, rather than the trailer nudging more users to click subscribe, but the correlation nonetheless looks quite strong. So it might be a good idea for me to add a channel trailer, as currently I don’t have one.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;channel_trailer_boxplot.png&#34; alt=&#34;Figure 4 - Distribution of subscriber count by whether there is a channel trailer&#34; /&gt;&lt;br /&gt;
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;insights-from-video-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Insights from Video Data:&lt;/h2&gt;
+&lt;p&gt;Further investigation into individual videos uncovered valuable insights. Both groups of channels contained around 10,000 videos, on which I could retrieve useful statistics on views, likes, shares, as well as information on their descriptions, or the duration of the video.
+Looking at individual videos, it seems that videos from dragonboat channels somewhat outperform those from mixed-content channels in terms of views and likes.
+&lt;img src=&#34;videos_likes_vs_views_scatter.png&#34; alt=&#34;Figure 5 - View count vs Like count by channel type - Log scale&#34; /&gt;
+Additionally, the presence of hashtags and descriptive content in video descriptions positively correlated with view counts, indicating their importance in attracting viewership. Since the YouTube algorithms has been changed over the years and the use of hashtags is also quite recent, I restricted that analysis to only videos published since 2022. In both cases the inter-quartile range of the video views ranges much higher if the video has a description and higher if the description contains hashtags for search.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;hashtags_boxplot.png&#34; alt=&#34;Figure 6 - Distribution of video view count by whether the description contains hashtags&#34; /&gt;
+&lt;img src=&#34;non_empty_description_boxplot.png&#34; alt=&#34;Figure 7 - Distribution of video view count by whether the description contains any text&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Lastly, I analyzed whether viewers of dragonboat videos prefer videos of a certain duration, as mine are often on the longer side, especially for those showing international trips with some travel content at the beginning.&lt;/p&gt;
+&lt;p&gt;For both views and likes there does not appear to be any siginficant correlation with the duration of the video, but all in all there is a sweet spot in which most of the videos simply are, with the middle 50% of videos being in the range of one to three minutes long.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;videos_views_vs_duration_scatter.png&#34; alt=&#34;Figure 8 - View count vs. duration (seconds) by channel type - log scale&#34; /&gt;&lt;br /&gt;
+&lt;img src=&#34;videos_likes_vs_duration_scatter.png&#34; alt=&#34;Figure 9 - Like count vs. duration (seconds) by channel type - log scale&#34; /&gt;&lt;br /&gt;
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;monitoring-my-own-channel-using-the-youtube-analytics-api&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Monitoring my own channel using the YouTube Analytics API:&lt;/h2&gt;
+&lt;p&gt;Already some months ago I started becoming more interested in the issue and asked ChatGPT to improve my video descriptions in terms of search engine optimization (SEO). For some videos that did not yet have custom thumbnails I also added them. These changes occurred around the 18th of February 2024 so I wanted to check on the YouTube Analytics API whether this had an effect. Unfortunately the metric of ‘Annotation Impressions’ - the presentation of a clickable thumbnail to a video in a user’s feed, which is visible without a problem in the YouTube Studio App, cannot be retrieved via the API. In terms of overall views for these older videos with improved descriptions and thumbnails the effect appears still marginal, but I will keep an eye on the developments.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;analytics_adjustment_seo.png&#34; alt=&#34;Figure 10 - View Count over time for videos with adjusted metadata&#34; /&gt;&lt;br /&gt;
+&lt;/p&gt;
+&lt;p&gt;Annotation impressions for all my videos did increase when I made the changes in titles, descriptions and thumbnails (third spike), but this could still have been boosted by the prior publication of two other videos (previous two spikes).&lt;/p&gt;
+&lt;div class=&#34;float&#34;&gt;
+&lt;img src=&#34;Screenshot_YT_Studio.jpg&#34; alt=&#34;Figure 11 - Aggregate annotation impressions&#34; /&gt;
+&lt;div class=&#34;figcaption&#34;&gt;Figure 11 - Aggregate annotation impressions&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;my-learnings&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;My learnings:&lt;/h2&gt;
+&lt;p&gt;In conclusion, my analysis offers valuable insights into the complexities of YouTube’s algorithm and its impact on content visibility.
+Moving forward, I aim to leverage these insights to refine my content strategy and enhance the overall viewing experience for dragonboat enthusiasts worldwide.&lt;br /&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Most importantly this means that I will publish new content on &lt;strong&gt;dedicated channels&lt;/strong&gt; aligning with the YouTube topic categories. For this I have already created a new dragonboat channel for my team &lt;a href=&#34;https://www.youtube.com/@FFM-Mixup-DB&#34;&gt;Frankforter Dorschenanner&lt;/a&gt; ✅. So far I will keep the existing videos on the old channel, as the migration of videos will reset the views and likes and I am not yet willing to do that.&lt;/li&gt;
+&lt;li&gt;I will try to shoot a little channel trailer 🎥 and make sure descriptions and titles are search-optimized and thumbnails exciting enough to make people click!&lt;/li&gt;
+&lt;li&gt;In particular for typical dragonboat regattas with multiple races, I will create separate ‘raw’ videos for each race, as this aligns better with the length viewers are used to rather than one longer video with chapters. Also, this strategy helps my statistics for becoming a YouTube partner, as one should publish at least three videos in the last 90 days.&lt;br /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let’s make 2024 viral! 🤩&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Lockdown productivity</title>
