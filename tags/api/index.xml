@@ -47,21 +47,21 @@ In terms of subscriber counts, three channels have surpassed and other three are
 &lt;/div&gt;
 &lt;div id=&#34;the-impact-of-channel-categorization&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;The Impact of Channel Categorization:&lt;/h2&gt;
-&lt;p&gt;Then, I decided to dig deeper into the issue of topic categories. In the analysis above I made the decision to group channels into ‘dragonboat’ and ‘mixed content’, but (how) does the YouTube algorithm categorize them?
+&lt;p&gt;Then, I decided to dig deeper into the issue of topic categories. In the analysis above I made the decision to group channels into ‘dragonboat’ and ‘mixed content’, but (how) does the YouTube algorithm distinguish between them?
 Checking the frequencies of categories within the first three topic category lists of the channels reveals that most ‘mixed content’ channels in my sample are categorized similarly to the pure ‘dragonboat’ channels, having as first category ‘Sports’, as second category ‘Lifestyle’ and as third category - if available - ‘Vehicle’ (for boat).&lt;br /&gt;
 &lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;topic_categories_db.png&#34; alt=&#34;Figure 2 - Topic categories for dragonboat channels&#34; /&gt;&lt;br /&gt;
 &lt;img src=&#34;topic_categories_mixed.png&#34; alt=&#34;Figure 3 - Topic categories for mixed content channels&#34; /&gt;&lt;br /&gt;
 &lt;/p&gt;
-&lt;p&gt;By contrast, the topic categories returned for &lt;a href=&#34;https://www.youtube.com/@AlexMelemenidis&#34;&gt;my channel&lt;/a&gt; are:&lt;/p&gt;
+&lt;p&gt;By contrast, the topic categories returned for &lt;a href=&#34;https://www.youtube.com/@AlexMelemenidis&#34;&gt;&lt;strong&gt;my channel&lt;/strong&gt;&lt;/a&gt; are:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Hobby&lt;/li&gt;
 &lt;li&gt;Sport&lt;/li&gt;
 &lt;li&gt;Tourism&lt;/li&gt;
 &lt;li&gt;Lifestyle&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;So it seems that I am more mixed than these mixed channels. On my channel I also feature travel videos and some pure aerial content drone videos, which appears to confuse the algorithm when deciding which content to show on a user’s feed.&lt;/p&gt;
-&lt;p&gt;Professional YouTuber also advise to have &lt;strong&gt;consistent content&lt;/strong&gt; in one channel. Besides the categorization, the YouTube algorithm also promotes the content of channel based on its &lt;strong&gt;previous success&lt;/strong&gt; in terms of the count of viewers and subscribers, how many users click on impressions of a video in their feed (the so-called ‘click-through-rate’) and how long the viewers are actually watching the video (‘retention’).
+&lt;p&gt;So it seems that &lt;strong&gt;I am more mixed&lt;/strong&gt; than these mixed channels. On my channel I also feature travel videos and some pure aerial content drone videos, which appears to confuse the algorithm when deciding which content to show on a user’s feed.&lt;/p&gt;
+&lt;p&gt;Professional YouTubers also advise to have &lt;strong&gt;consistent content&lt;/strong&gt; in one channel. Besides the categorization, the YouTube algorithm also promotes the content of a channel based on its &lt;strong&gt;previous success&lt;/strong&gt; in terms of the count of viewers and subscribers, how many users click on impressions of a video in their feed (the so-called ‘click-through-rate’) and how long the viewers are actually watching the video (‘retention’).
 While I personally like &lt;a href=&#34;https://www.youtube.com/playlist?list=PLpW2X6ap8IsVrZQt3HgyLb89igcNMOxit&#34;&gt;paddling&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/playlist?list=PLpW2X6ap8IsUq_5SPBWske4rQgJsC3A1X&#34;&gt;surfing&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/playlist?list=PLpW2X6ap8IsXzPVj5rfYpwAJDdkImVqGd&#34;&gt;skiing&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/playlist?list=PLpW2X6ap8IsV4s9P7-EXgnCMmQLG0GakE&#34;&gt;travelling&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/playlist?list=PLpW2X6ap8IsUITs2rTHvWMl_jmNlbMpz6&#34;&gt;obstacle course racing&lt;/a&gt;, hiking and &lt;a href=&#34;https://www.youtube.com/playlist?list=PLpW2X6ap8IsVINEBJPJrKqgFQ_GYhpVmt&#34;&gt;flying drones&lt;/a&gt;, other people may not necessarily like &lt;strong&gt;all of these activities together&lt;/strong&gt;. So someone who has seen and liked my ski-trip videos will be shown my dragonboat videos in their feed, but will not be interested and thus reduce my click-through rate, or click and then stop the video after a few seconds, hurting my retention rate.&lt;/p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
