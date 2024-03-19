@@ -24,14 +24,14 @@
 &lt;p&gt;&lt;em&gt;Find the code for my analysis on my &lt;a href=&#34;https://github.com/alex-m-ffm/Youtube_Analysis&#34;&gt;Github repo&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Introduction:&lt;/h2&gt;
-&lt;p&gt;As a passionate amateur dragonboat paddler and video editor, I have over the years created more and more videos (currently 61 published) to show the world the competitions and travels of my awesome team.&lt;/p&gt;
+&lt;p&gt;As a passionate amateur dragonboat paddler and video editor, I have over the years created more and more videos (currently 61 published) to show the world the competitions and travels of my awesome team. Over time my editing skills have increased through hands-on training, following YouTube tutorials of other creators and a great &lt;a href=&#34;https://www.udemy.com/course/davinci-resolve-training-course/?kw=Video+Editing+in+DaVinci+Resolve+18%2F17%3A+Beginner+to+Advanced&amp;amp;src=sac&amp;amp;couponCode=LETSLEARNNOWPP&#34;&gt;Udemy course&lt;/a&gt;, I have advanced from editing on beginner tools like the Premiere Elements to DaVinci Resolve, a tool also used by media professionals. Further, I have also invested in the lifetime access to &lt;a href=&#34;https://audiio.com/browse&#34;&gt;royalty-free music&lt;/a&gt; so that I can have new soundtracks that could also be fine if I ever managed to monetize my channel.&lt;/p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/4UYevtuy5Dg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
 &lt;p&gt;&lt;br /&gt;
-Yet, this improvement in quality did not translate into the traffic I was hoping for, so I concluded the YouTube algorithm is not promoting my content to users enough. I decided to investigate this and use my Data Science skills to solve the problem. In this blog post, I’ll share insights from my analysis and explore how YouTube’s algorithm impacts the visibility and success of dragonboat channels.&lt;/p&gt;
+Yet, this improvement in video quality did not translate into the traffic I was hoping for, so I concluded the YouTube algorithm is not promoting my content enough. I decided to investigate this and use my Data Science skills to solve the problem. In this blog post, I’ll share insights from my analysis and explore how YouTube’s algorithm impacts the visibility and success of dragonboat channels.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;exploring-channel-data&#34; class=&#34;section level2&#34;&gt;
