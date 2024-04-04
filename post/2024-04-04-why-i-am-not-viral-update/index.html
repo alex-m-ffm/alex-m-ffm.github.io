@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academia 4.3.1">
+  <meta name="generator" content="Hugo 0.79.1" />
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Alexandros Melemenidis">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Following up on the previous blog post I present to you my first learnings after making the first suggested changes.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://alex.melemenidis.de/post/2024-04-04-why-i-am-not-viral-update/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#fc6f5c">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academia.min.bb5ab09ea511c063bce928c9c03b5ec3.css">
+
+  
+
+  
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://alex.melemenidis.de/post/2024-04-04-why-i-am-not-viral-update/">
+
+  
+  
+  
+  
+    
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Alex Melemenidis&#39;s homepage">
+  <meta property="og:url" content="https://alex.melemenidis.de/post/2024-04-04-why-i-am-not-viral-update/">
+  <meta property="og:title" content="Why I am not viral on Youtube - UPDATE | Alex Melemenidis&#39;s homepage">
+  <meta property="og:description" content="Following up on the previous blog post I present to you my first learnings after making the first suggested changes."><meta property="og:image" content="https://alex.melemenidis.de/post/2024-04-04-why-i-am-not-viral-update/featured.jpg">
+  <meta property="twitter:image" content="https://alex.melemenidis.de/post/2024-04-04-why-i-am-not-viral-update/featured.jpg"><meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2024-04-04T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2024-04-04T10:00:00&#43;02:00">
+  
+
+  
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#fc6f5c",
+          "text": "#fff"
+        },
+        "button": {
+          "background": "#fff",
+          "text": "#fc6f5c"
+        }
+      },
+      "theme": "classic",
+      "content": {
+        "message": "This website uses cookies to ensure you get the best experience on our website.",
+        "dismiss": "Got it!",
+        "link": "Learn more",
+        "href": "/privacy/"
+      }
+    })});
+</script>
+
+
+
+  
+
+
+
+
+
+  <title>Why I am not viral on Youtube - UPDATE | Alex Melemenidis&#39;s homepage</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Alex Melemenidis&#39;s homepage</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article py-5" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container split-header">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+        <img class="img-fluid w-100" src="/post/2024-04-04-why-i-am-not-viral-update/featured_hu3d03a01dcc18bc5be0e67db3d8d209a6_73827_680x500_fill_q90_lanczos_smart1.jpg" itemprop="image" alt="">
+        <span
+          class="article-header-caption">&lsquo;Photo by <!-- raw HTML omitted -->S O C I A L . C U T<!-- raw HTML omitted --> on <!-- raw HTML omitted -->Unsplash<!-- raw HTML omitted -->&rsquo;</span>
+    </div>
+    <div class="col-lg-8">
+      <h1 itemprop="name">Why I am not viral on Youtube - UPDATE</h1>
+
+      
+
+      
+
+
+
+<meta content="2024-04-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2024-04-04 10:00:00 &#43;0200 CEST" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/admin/">Alexandros Melemenidis</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    <time>Apr 4, 2024</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://alex.melemenidis.de/post/2024-04-04-why-i-am-not-viral-update/&amp;text=Why%20I%20am%20not%20viral%20on%20Youtube%20-%20UPDATE" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://alex.melemenidis.de/post/2024-04-04-why-i-am-not-viral-update/&amp;t=Why%20I%20am%20not%20viral%20on%20Youtube%20-%20UPDATE" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Why%20I%20am%20not%20viral%20on%20Youtube%20-%20UPDATE&amp;body=https://alex.melemenidis.de/post/2024-04-04-why-i-am-not-viral-update/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://alex.melemenidis.de/post/2024-04-04-why-i-am-not-viral-update/&amp;title=Why%20I%20am%20not%20viral%20on%20Youtube%20-%20UPDATE" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Why%20I%20am%20not%20viral%20on%20Youtube%20-%20UPDATE%20https://alex.melemenidis.de/post/2024-04-04-why-i-am-not-viral-update/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://alex.melemenidis.de/post/2024-04-04-why-i-am-not-viral-update/&amp;title=Why%20I%20am%20not%20viral%20on%20Youtube%20-%20UPDATE" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+    </div>
+  </div>
+</div>
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+
+<div id="update-on-my-dragonboat-channel-insights-and-developments" class="section level2">
+<h2>Update on My Dragonboat Channel: Insights and Developments</h2>
+<p>It’s time for an update on the progress of my dragonboat-focused YouTube channel. Over the past weeks, I’ve been diving deep into the analytics, experimenting with content, and exploring ways to optimize my channel’s performance. Here’s what I’ve discovered so far:</p>
+<div id="leveraging-youtube-algorithm-with-short-vertical-videos" class="section level3">
+<h3>1. Leveraging YouTube Algorithm with Short Vertical Videos</h3>
+<p>Last week, I uploaded a short vertical video showcasing a preparation training for the “Monster the Loch” event in Scotland 2023. The video gained traction quickly, with the YouTube algorithm promoting it to users’ feeds. Although the promotion eventually tapered off due to moderate watch and retention rates, the video still garnered over 400 views — a promising start (as this is higher than my views-per-video average on the old channel). One key takeaway was the audience demographic: a significant portion of viewers hailed from dragonboat-loving countries like Indonesia, Thailand, and the Philippines. Armed with this insight, I plan to schedule future premieres during prime viewing hours for these regions to maximize engagement.<br />
+Another interesting insight was that this video is shown quite prominently in the YouTube search results for “Monster the Loch 2023”, far higher than my full-length video on my old channel, suggesting the YouTube algorithm did not find my old video relevant to the search terms, while it did find the new one relevant (even though it is not showing the actual event).</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/imgGhXArxwk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+</div>
+<div id="reassessing-old-contents-viability" class="section level3">
+<h3>2. Reassessing Old Content’s Viability</h3>
+<p>To test the viability of reusing old content, I attempted to migrate a low-performing video from my previous channel to the new one. Unfortunately, YouTube seemed to recognize the video’s filename and associated it with its lackluster performance on the old channel, resulting in minimal promotion. While this suggests challenges in repurposing old content directly, it underscores the importance of cultivating relevant and consistent material on the new channel. Should the new channel take off it could still make sense to migrate, to make the new channel more and the old channel less associated with the dragonboat topic, thus helping the algorithm direct the right audiences to content on each channel.</p>
+</div>
+<div id="premiering-new-content-a-strategic-approach" class="section level3">
+<h3>3. Premiering New Content: A Strategic Approach</h3>
+<p>Yesterday, I premiered a meticulously edited video showcasing a dragonboat event from last year. With optimized metadata, subtitles in multiple languages, and strategic scheduling during South East Asia’s prime time, I eagerly awaited the results.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/egeGvqxIhIs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>However, it appears that the YouTube algorithm works differently for long-form content than for Shorts and is currently trying to push Shorts content more to compete better with TikTok. While my new video is given impressions, this is still happening quite slowly. One potential issue could be that also this video is considered “old”, as it is referring to an event more than half a year in the past so that there would also be few searches for that event this time of the year where the video could be shown. Further, I posted the video on Good Friday, a public holiday in Germany, where people might have been busy with other activities. Nonetheless, with the publication of the new video also the re-uploaded old video was shown to users as a recommended next video and generated a few views and likes.<br />
+Following three uploads I wanted to check in the YouTube Data API how my new channel is now being categorized behind the scenes. The first category is now “Vehicle” and the second “Lifestyle” which is somewhat closer to other dragonboat channels than before, but is missing “Sports”, which is the first category for the most successful channels. So the uploaded content seems to appear “too fun” for the YouTube algorithm. To be more “athletic” I split up the pure race content for last year’s Museumsuferfest event into three separate videos and uploaded them to the new channel and furthermore generated “pure race” content for the Dragonboat Festival in Annecy, France which we visited in 2022. Looking forward to see whether this moves the categorization in the right direction!
+In May, me and another team member are joining the Frankfurt Canoe Club team as guest for the <a href="https://drachenbootfestival-hannover.de/">Hanover Dragonboat Festival</a>, one of the largest dragonboat events in Germany. I am hoping new content from that event produced quickly will generate more impressions and views for my new channel.</p>
+</div>
+<div id="building-an-automated-reporting-solution" class="section level3">
+<h3>4. Building an Automated Reporting Solution</h3>
+<p>To gain deeper insights into my channel’s performance, I’ve embarked on a project to automate data collection using the YouTube Reporting API. By downloading detailed daily reports and storing them in AWS DynamoDB tables, I aim to track key metrics more efficiently. Check out my updated <a href="https://github.com/alex-m-ffm/Youtube_Analysis/blob/main/AWS_Storage_Solution.md">GitHub repository</a> for more details.</p>
+</div>
+<div id="crafting-a-channel-trailer" class="section level3">
+<h3>5. Crafting a Channel Trailer</h3>
+<p>Looking ahead, I’m working on creating a compelling channel trailer to entice potential subscribers. Scheduled for completion after Easter, this trailer aims to showcase the thrill and camaraderie of dragonboat racing, enticing viewers to join our community.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/g3xyaGnmcNE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>Stay tuned for more updates as I continue to navigate the waters of YouTube content creation. Together, let’s paddle towards success!</p>
+</div>
+</div>
+
+    </div>
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/youtube/">YouTube</a>
+  
+  <a class="badge badge-light" href="/tags/video-editing/">Video Editing</a>
+  
+  <a class="badge badge-light" href="/tags/api/">API</a>
+  
+  <a class="badge badge-light" href="/tags/data-science/">Data Science</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu6bb3d8d55dd3e320d2abc8ab1543477e_109104_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="https://alex.melemenidis.de/">Alexandros Melemenidis</a></h5>
+      
+      <p class="card-text" itemprop="description">Make the data work for YOU.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="/#contact" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://scholar.google.co.uk/citations?user=_yGta4AAAAAJ" target="_blank" rel="noopener">
+              <i class="fab fa-google-scholar"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.linkedin.com/in/alexandros-melemenidis-18a6b6183/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.xing.com/profile/Alexandros_Melemenidis" target="_blank" rel="noopener">
+              <i class="fab fa-xing"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/alex-m-ffm" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.youtube.com/channel/UC7p805M43uY6WrJ29v3Fe7g" target="_blank" rel="noopener">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/post/2024-03-19-why-i-am-not-viral/">Why I am not viral on Youtube - A Data Analysis</a></li>
+          
+          <li><a href="/post/2021-01-10-lockdown-productivity/">Lockdown productivity</a></li>
+          
+          <li><a href="/project/bee-observer/">Bee Observer</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academia.min.e4fc229c2f28284fc2dfa5b66a52b765.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        
+        <p class="powered-by">
+          <a href="/privacy/">Privacy Policy</a>
+        </p>
+        
+        <p>
+          Copyright © 2024 &middot; 
+          Powered by
+          <a href="https://gethugothemes.com" target="_blank" rel="noopener">Gethugothemes</a>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <ul class="list-inline network-icon text-right">
+          
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

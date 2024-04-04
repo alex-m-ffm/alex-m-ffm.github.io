@@ -7,10 +7,66 @@
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; {year}</copyright>
-    <lastBuildDate>Tue, 19 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Apr 2024 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://alex.melemenidis.de/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Why I am not viral on Youtube - UPDATE</title>
+      <link>https://alex.melemenidis.de/post/2024-04-04-why-i-am-not-viral-update/</link>
+      <pubDate>Thu, 04 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://alex.melemenidis.de/post/2024-04-04-why-i-am-not-viral-update/</guid>
+      <description>
+
+
+&lt;div id=&#34;update-on-my-dragonboat-channel-insights-and-developments&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Update on My Dragonboat Channel: Insights and Developments&lt;/h2&gt;
+&lt;p&gt;It’s time for an update on the progress of my dragonboat-focused YouTube channel. Over the past weeks, I’ve been diving deep into the analytics, experimenting with content, and exploring ways to optimize my channel’s performance. Here’s what I’ve discovered so far:&lt;/p&gt;
+&lt;div id=&#34;leveraging-youtube-algorithm-with-short-vertical-videos&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;1. Leveraging YouTube Algorithm with Short Vertical Videos&lt;/h3&gt;
+&lt;p&gt;Last week, I uploaded a short vertical video showcasing a preparation training for the “Monster the Loch” event in Scotland 2023. The video gained traction quickly, with the YouTube algorithm promoting it to users’ feeds. Although the promotion eventually tapered off due to moderate watch and retention rates, the video still garnered over 400 views — a promising start (as this is higher than my views-per-video average on the old channel). One key takeaway was the audience demographic: a significant portion of viewers hailed from dragonboat-loving countries like Indonesia, Thailand, and the Philippines. Armed with this insight, I plan to schedule future premieres during prime viewing hours for these regions to maximize engagement.&lt;br /&gt;
+Another interesting insight was that this video is shown quite prominently in the YouTube search results for “Monster the Loch 2023”, far higher than my full-length video on my old channel, suggesting the YouTube algorithm did not find my old video relevant to the search terms, while it did find the new one relevant (even though it is not showing the actual event).&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/imgGhXArxwk&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;reassessing-old-contents-viability&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;2. Reassessing Old Content’s Viability&lt;/h3&gt;
+&lt;p&gt;To test the viability of reusing old content, I attempted to migrate a low-performing video from my previous channel to the new one. Unfortunately, YouTube seemed to recognize the video’s filename and associated it with its lackluster performance on the old channel, resulting in minimal promotion. While this suggests challenges in repurposing old content directly, it underscores the importance of cultivating relevant and consistent material on the new channel. Should the new channel take off it could still make sense to migrate, to make the new channel more and the old channel less associated with the dragonboat topic, thus helping the algorithm direct the right audiences to content on each channel.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;premiering-new-content-a-strategic-approach&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;3. Premiering New Content: A Strategic Approach&lt;/h3&gt;
+&lt;p&gt;Yesterday, I premiered a meticulously edited video showcasing a dragonboat event from last year. With optimized metadata, subtitles in multiple languages, and strategic scheduling during South East Asia’s prime time, I eagerly awaited the results.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/egeGvqxIhIs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;However, it appears that the YouTube algorithm works differently for long-form content than for Shorts and is currently trying to push Shorts content more to compete better with TikTok. While my new video is given impressions, this is still happening quite slowly. One potential issue could be that also this video is considered “old”, as it is referring to an event more than half a year in the past so that there would also be few searches for that event this time of the year where the video could be shown. Further, I posted the video on Good Friday, a public holiday in Germany, where people might have been busy with other activities. Nonetheless, with the publication of the new video also the re-uploaded old video was shown to users as a recommended next video and generated a few views and likes.&lt;br /&gt;
+Following three uploads I wanted to check in the YouTube Data API how my new channel is now being categorized behind the scenes. The first category is now “Vehicle” and the second “Lifestyle” which is somewhat closer to other dragonboat channels than before, but is missing “Sports”, which is the first category for the most successful channels. So the uploaded content seems to appear “too fun” for the YouTube algorithm. To be more “athletic” I split up the pure race content for last year’s Museumsuferfest event into three separate videos and uploaded them to the new channel and furthermore generated “pure race” content for the Dragonboat Festival in Annecy, France which we visited in 2022. Looking forward to see whether this moves the categorization in the right direction!
+In May, me and another team member are joining the Frankfurt Canoe Club team as guest for the &lt;a href=&#34;https://drachenbootfestival-hannover.de/&#34;&gt;Hanover Dragonboat Festival&lt;/a&gt;, one of the largest dragonboat events in Germany. I am hoping new content from that event produced quickly will generate more impressions and views for my new channel.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;building-an-automated-reporting-solution&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;4. Building an Automated Reporting Solution&lt;/h3&gt;
+&lt;p&gt;To gain deeper insights into my channel’s performance, I’ve embarked on a project to automate data collection using the YouTube Reporting API. By downloading detailed daily reports and storing them in AWS DynamoDB tables, I aim to track key metrics more efficiently. Check out my updated &lt;a href=&#34;https://github.com/alex-m-ffm/Youtube_Analysis/blob/main/AWS_Storage_Solution.md&#34;&gt;GitHub repository&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;crafting-a-channel-trailer&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;5. Crafting a Channel Trailer&lt;/h3&gt;
+&lt;p&gt;Looking ahead, I’m working on creating a compelling channel trailer to entice potential subscribers. Scheduled for completion after Easter, this trailer aims to showcase the thrill and camaraderie of dragonboat racing, enticing viewers to join our community.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/g3xyaGnmcNE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Stay tuned for more updates as I continue to navigate the waters of YouTube content creation. Together, let’s paddle towards success!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Why I am not viral on Youtube - A Data Analysis</title>
